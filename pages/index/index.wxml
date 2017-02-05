@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">获取密码</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd" catchtap="scanCode">扫码获取密码</view>
+      </view>
+    </view>
+    <view class="weui-cells__title">附近的场景</view>
+    <view class="weui-cells weui-cells_after-title">
+      
+      <block wx:for="{{servers}}">
+        <navigator url="../info/info?id={{item.secret}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">{{item.code}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

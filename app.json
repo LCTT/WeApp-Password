@@ -1,0 +1,47 @@
+{
+    "pages": [
+        
+        "pages/index/index",
+        "pages/servers/servers",
+        "pages/info/info",
+        "pages/options/options",
+        "pages/add/add",
+        "pages/addSucc/addSucc"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "运维密码",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "tabBar": {
+        "color": "#cdcdcd",
+        "selectedColor": "#48c23d",
+        "borderStyle": "black",
+        "backgroundColor": "#fff",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "获取密码",
+                "iconPath": "images/password.png",
+                "selectedIconPath": "images/password_hl.png"
+            },
+            {
+                "pagePath": "pages/servers/servers",
+                "text": "场景管理",
+                "iconPath": "images/server.png",
+                "selectedIconPath": "images/server_hl.png"
+            },
+            {
+                "pagePath": "pages/options/options",
+                "text": "设置",
+                "iconPath": "images/menu.png",
+                "selectedIconPath": "images/menu_hl.png"
+            }
+        ]
+    }
+}

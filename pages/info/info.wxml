@@ -1,0 +1,33 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">场景详情</view>
+        <view class="page__desc">查看场景详情</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__label">最新密码</view>
+                <view class="weui-form-preview__value_in-hd">{{code}}</view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">场景名</view>
+                    <view class="weui-form-preview__value">{{name}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">用户名</view>
+                    <view class="weui-form-preview__value">{{username}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">场景备注</view>
+                    <view class="weui-form-preview__value">{{desc}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+               
+                <view class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active" catchtap="deleteOne">删除</view>
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" url="../qrcode/qrcode?name={{name}}&username={{username}}&secret={{key}}">生成二维码</navigator>
+            </view>
+        </view>
+    </view>
+</view>
