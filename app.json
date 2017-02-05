@@ -1,18 +1,21 @@
 {
     "pages": [
-        
+       
         "pages/index/index",
         "pages/servers/servers",
         "pages/info/info",
-        "pages/options/options",
+        "pages/qrcode/qrcode",
+        "pages/options/options", 
         "pages/add/add",
-        "pages/addSucc/addSucc"
+        "pages/addSucc/addSucc",
+        "pages/about/about",
+        "pages/manual/manual"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
+        "navigationBarBackgroundColor": "#000",
         "navigationBarTitleText": "运维密码",
-        "navigationBarTextStyle": "black",
+        "navigationBarTextStyle": "white",
         "enablePullDownRefresh": true
     },
     "networkTimeout": {

@@ -1,0 +1,41 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">Linux.CN</view>
+        <view class="page__desc">成为华文区一流的Linux与开源交流社区</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">关于我们</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                <view class="weui-article__h3">历史</view>
+                    <view  class="weui-article__p">
+                    『Linux 中国』创立于 2003 年，其前身是炎黄角马（CNGNU）。在创立初期，由于定位和发展方向不明确，曾经长期以论坛的方式存在，并发展缓慢。在首任站长 DeadFire 的坚持维系下，一直保持没有中断。『Linux 中国』在 2012 年以来发展较快，已经在多平台开展内容和互动通道，除网站之外，还在包括微博、微信、QQ 邮件列表、QQ 群讨论组等多个平台拥有较大影响力。
+                    </view>
+                    <view class="weui-article__h3">内容</view>
+                    <view class="weui-article__p">
+                      『Linux 中国』主要涉及的内容方面包括：Linux 及开源方面的新闻事件、Linux 及开源技术方面的培训普及和宣传、IT 业界相关的评论访谈等等。内容建设的渠道主要来自原创写作、原创编译和按内容协议的转载。其中原创编译工作主要来自『Linux 中国』发起建立的翻译志愿者组织 LCTT 。
+                    </view>
+                    <view class="weui-article__h3">发展方向</view>
+                    <view class="weui-article__p">
+                       『Linux 中国』的发展方向为：推动 Linux 和开源在中国的发展，促进 Linux 及开源技术在国内的普及，构建开源社区环境。Linux 中国的发展宗旨是：“成为华文区一流的 Linux 与开源交流社区”。
+                    </view>
+                   
+                </view>
+                
+            </view>
+        </view>
+         <view class="weui-article">
+            <view class="weui-article__h3">关于开发者</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view  class="weui-article__p">
+                    Bestony(白宦成),LCTT(LinuxCN Translate Team )技术组成员。
+                    </view>
+                    
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

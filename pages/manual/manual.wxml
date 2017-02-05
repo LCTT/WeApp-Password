@@ -1,0 +1,38 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">使用说明</view>
+    <view class="page__desc">帮助你更好的管理密码</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">产品说明</view>
+      <view class="weui-article__section">
+        <view class="weui-article__section">
+          <view class="weui-article__h2">关于TOTP</view>
+          <view class="weui-article__p">
+            TOTP（基于时间的一次性密码算法）是支持时间作为动态因素基于HMAC一次性密码算法的扩展。
+          </view>
+          <view class="weui-article__h2">概念说明</view>
+          <view class="weui-article__p">
+            场景即为特定的需要使用一次性密码的服务，可能是某个网站、某台服务器。
+          </view>
+          <view class="weui-article__p">
+            密码是根据服务端提供的种子生成的一次性密码，可以用于登录你的主机
+          </view>
+          <view class="weui-article__h2">添加场景</view>
+          <view class="weui-article__p">
+           点击菜单栏底部的场景，切换至场景页面，在场景页面点击添加场景，并扫描服务供应商提供的二维码，自动录入种子信息，设置场景名、备注，并保存
+          </view>
+          <view class="weui-article__h2">查看密码</view>
+          <view class="weui-article__p">
+           查看密码支持两种方式，一种是扫描生成的二维码，自动加载到场景的密码。另外一种是点击场景列表中指定的场景，找到场景，并查看对应的密码。
+          </view>
+          <view class="weui-article__h2">生成二维码</view>
+          <view class="weui-article__p">
+           进入场景页面，点击场景，进入场景页面，查看场景详情，点击详情下方的生成二维码按钮，进入二维码页面，等待生成完成二维码后，点击图片进入图片预览界面，长按保存或截图即可即可。
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

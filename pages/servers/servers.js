@@ -12,7 +12,15 @@ Page({
         })
       },
       fail: function (err) {
-
+        wx.showModal({
+          title: '扫码错误！',
+          content: '是否重新扫描？',
+          success: function (res) {
+            if (res.confirm) {
+              this.scanCode();
+            }
+          }
+        })
       }
     })
   },
@@ -27,9 +35,11 @@ Page({
       success: function (res) {
         res.keys.forEach(function (value, index, array) {
           var tmp_servers = that.data.servers;
+          var keys = value;
           tmp_servers.push(wx.getStorageSync(value));
           tmp_servers.forEach(function (value, index, array) {
             value.code = totp.getCode(value.secret);
+            value.keys = keys;
           })
           that.setData({
             servers: tmp_servers
@@ -37,11 +47,26 @@ Page({
         })
       },
       fail: function () {
-        
+        wx.showModal({
+          title: '提示',
+          content: '刷新失败，是否重新刷新？',
+          success: function (res) {
+            if (res.confirm) {
+              this.refreshData();
+            }
+          }
+        })
       },
       complete: function () {
         // complete
       }
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '运维密码！帮助你更好的管理你的密码！',
+      desc: 'LinuxCN 出品',
+      path: '/pages/servers/servers'
+    }
   }
 })

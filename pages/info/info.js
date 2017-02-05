@@ -1,19 +1,78 @@
-// pages/info/info.js
+const totp = require('../../utils/totp.js');
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  data: {
+
   },
-  onReady:function(){
-    // 页面渲染完成
+  onLoad: function (options) {
+    var that = this;
+    wx.getStorage({
+      key: options.id,
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          keys: options.id,
+          name: res.data.name,
+          username: res.data.username,
+          desc: res.data.desc,
+          secret:res.data.secret,
+          code: totp.getCode(res.data.secret),
+        })
+      },
+      fail: function () {
+        wx.showModal({
+          title: '数据读取错误！',
+          content: '当前二维码不正确或场景不是你创建的！请确认后重新扫描！',
+          success: function (res) {
+            if (res.confirm) {
+              wx.switchTab({
+                url: '../index/index'
+              })
+            }
+          }
+        })
+      }
+    })
   },
-  onShow:function(){
-    // 页面显示
+  deleteOne: function (e) {
+    var that = this;
+    wx.removeStorage({
+      key: that.data.keys,
+      success: function (res) {
+        wx.showToast({
+          title: '删除场景成功',
+          icon: 'success',
+          duration: 2000,
+          success: function () {
+            wx.switchTab({
+              url: '../servers/servers'
+            })
+          }
+        })
+
+      },
+      fail: function () {
+        wx.showModal({
+          title: '删除失败！',
+          content: '当前场景无法删除，请联系管理员！',
+          success: function (res) {
+            if (res.confirm) {
+              wx.switchTab({
+              url: '../servers/servers'
+            })
+            }
+          }
+        })
+      }
+    })
   },
-  onHide:function(){
-    // 页面隐藏
+  updateCode:function(){
+    var that = this;
+    var newToken = totp.getCode(this.data.secret);
+    that.setData({
+      code:newToken
+    })
   },
-  onUnload:function(){
-    // 页面关闭
+  onPullDownRefresh:function(){
+    this.updateCode();
   }
 })

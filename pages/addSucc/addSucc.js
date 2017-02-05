@@ -3,7 +3,7 @@ Page({
   data:{},
   returnIndex:function(){
     wx.switchTab({
-      url: '../index/index'
+      url: '../servers/servers'
     })
   }
 })

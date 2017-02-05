@@ -1,1 +1,8 @@
-/* pages/options/options.wxss */
+contact-button {
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+  background-color: #20a0ff;
+  padding: 20rpx;
+  border-radius: 50rpx;
+}
