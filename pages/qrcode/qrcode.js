@@ -71,8 +71,7 @@ Page({
   },
   formSubmit: function(e) {
     wx.switchTab({
-      url: '../index/index',
-     
+      url: '../servers/servers',
     })
   }
 
