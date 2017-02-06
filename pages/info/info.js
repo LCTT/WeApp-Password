@@ -98,5 +98,8 @@ Page({
   },
   onPullDownRefresh: function () {
     this.updateCode();
+  },
+  navigateBack: function () {
+    wx.navigateBack()
   }
 })
