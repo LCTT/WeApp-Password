@@ -8,7 +8,7 @@ Page({
     var that = this;
     setInterval(function () {
       that.refreshData();
-    }, 1000)
+    }, 10000)
 
   },
   scanCode: function () {
