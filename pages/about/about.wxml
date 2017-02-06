@@ -1,21 +1,64 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">Linux.CN</view>
-        <view class="page__desc">成为华文区一流的Linux与开源交流社区</view>
+        <view class="page__title">Linux 中国</view>
+        <view class="page__desc">成为华文区一流的 Linux 与开源交流社区</view>
     </view>
     <view class="page__bd">
         <view class="weui-article">
             <view class="weui-article__h1">关于我们</view>
             <view class="weui-article__section">
                 <view class="weui-article__section">
-                <view class="weui-article__h3">历史</view>
-                    <view  class="weui-article__p">
-                    『Linux 中国』创立于 2003 年，其前身是炎黄角马（CNGNU）。在创立初期，由于定位和发展方向不明确，曾经长期以论坛的方式存在，并发展缓慢。在首任站长 DeadFire 的坚持维系下，一直保持没有中断。『Linux 中国』在 2012 年以来发展较快，已经在多平台开展内容和互动通道，除网站之外，还在包括微博、微信、QQ 邮件列表、QQ 群讨论组等多个平台拥有较大影响力。
-                    </view>
-                    <view class="weui-article__h3">内容</view>
                     <view class="weui-article__p">
-                      『Linux 中国』主要涉及的内容方面包括：Linux 及开源方面的新闻事件、Linux 及开源技术方面的培训普及和宣传、IT 业界相关的评论访谈等等。内容建设的渠道主要来自原创写作、原创编译和按内容协议的转载。其中原创编译工作主要来自『Linux 中国』发起建立的翻译志愿者组织 LCTT 。
+                    『Linux 中国』，由 wxy 和 DeadFire 创立于2003年。致力于 Linux 的推广教育、Linux 技术研究、自由和开源软件理念的传播。在知识传播、组织开源志愿者活动等方面，携手众多开源爱好者共同取得了一定成就。
                     </view>
+                    <view class="weui-article__p">
+『Linux 中国』通过网站、微博、微信和邮件列表等平台传播各种 Linux 技术和资讯，并组织了 LCTT 翻译组对国外的开源方面的文章进行大量翻译，得到了开源社区的认可。
+                    </view>
+                <view class="weui-article__h3">LCTT</view>
+                    <view class="weui-article__p">
+                    LCTT，全称是：Linux.CN Translation Team，是由『Linux 中国』站长于 2013 年 9 月 10 日倡议发起的。会员约有数百人之多，并有数十积极活跃会员。LCTT 成立以来翻译了来自国外的数千篇文章，得到业界好评。是国内开源网站重要的翻译组织之一。
+                    </view>
+                    <view class="weui-article__p">
+官方网站： https://lctt.github.io/
+                    </view>
+                    <view class="weui-article__p">
+翻译工作群： 198889102，验证信息：“志愿者” （仅供翻译志愿者加入）.
+                    </view>
+                    <view class="weui-article__h3">平台</view>
+                    <view class="weui-article__p">
+                    官网： https://linux.cn/
+                    </view>
+                    <view class="weui-article__p">
+                    微博： Linux中国 （http://weibo.com/linuxcn）
+                    </view>
+                    <view class="weui-article__p">
+                    微信： Linux中国 （linux-cn，订阅号）；
+                    Linux开源社区 （cn_linux，订阅号）；
+                    Linux （cn-linux，服务号）；
+                    编程学习手册 （DevSays，服务号）；
+                    运维伙伴 （OpsSays，服务号）；
+                    自由及开放源代码软件 （ostalk，服务号）
+                    </view>
+                    <view class="weui-article__p">
+                    今日头条： Linux中国 （http://www.toutiao.com/m1553863776861185/）
+                    </view>
+                    <view class="weui-article__h3">QQ 群</view>
+                    <view class="weui-article__p">
+                    加群验证信息：“LINUXCN”
+                    </view>
+                    <view class="weui-article__p">
+                    
+总　群: 198889101 
+翻译组: 198889102  
+（翻译志愿者专属，请参考 LCTT 相关信息）
+运维群: 198889103 
+开发群: 198889104 
+虚拟化: 198889105 
+嵌入式: 198889106 
+水立方: 198889107 
+白帽子: 198889108
+新手村: 198889109
+</view>
                     <view class="weui-article__h3">发展方向</view>
                     <view class="weui-article__p">
                        『Linux 中国』的发展方向为：推动 Linux 和开源在中国的发展，促进 Linux 及开源技术在国内的普及，构建开源社区环境。Linux 中国的发展宗旨是：“成为华文区一流的 Linux 与开源交流社区”。
@@ -30,9 +73,8 @@
             <view class="weui-article__section">
                 <view class="weui-article__section">
                     <view  class="weui-article__p">
-                    Bestony(白宦成),LCTT(LinuxCN Translate Team )技术组成员。
+                    Bestony （白宦成），LCTT（LinuxCN Translate Team）技术组成员。
                     </view>
-                    
                 </view>
                 
             </view>
