@@ -3,11 +3,6 @@
     <view class="page__title">场景管理</view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell">
-        <view class="weui-cell__bd" catchtap="scanCode">新增场景</view>
-      </view>
-    </view>
     <view class="weui-cells__title">我添加的场景</view>
     <view class="weui-cells weui-cells_after-title">
       
