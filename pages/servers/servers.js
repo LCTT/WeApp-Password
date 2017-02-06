@@ -5,7 +5,7 @@ Page({
     this.refreshData();
   },
   scanCode: function () {
-    var that = this;c
+    var that = this;
     wx.scanCode({
       success: function (res) {
         wx.navigateTo({
