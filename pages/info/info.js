@@ -14,7 +14,7 @@ Page({
           name: res.data.name,
           username: res.data.username,
           desc: res.data.desc,
-          secret:res.data.secret,
+          secret: res.data.secret,
           code: totp.getCode(res.data.secret),
         })
       },
@@ -24,6 +24,31 @@ Page({
           content: '当前二维码不正确或场景不是你创建的！请确认后重新扫描！',
           success: function (res) {
             if (res.confirm) {
+              var that = this;
+              wx.scanCode({
+                success: function (res) {
+                  wx.redirectTo({
+                    url: '../info/info?id=' + res.result
+                  })
+                },
+                fail: function (res) {
+                  wx.showModal({
+                    title: '扫描二维码出错',
+                    content: '您的二维码有误，是否要重新扫描？',
+                    success: function (res) {
+                      if (res.confirm) {
+                        that.scanCode();
+                      } else {
+                        wx.switchTab({
+                          url: '../index/index'
+                        })
+                      }
+
+                    }
+                  })
+                }
+              })
+            } else {
               wx.switchTab({
                 url: '../index/index'
               })
@@ -57,22 +82,22 @@ Page({
           success: function (res) {
             if (res.confirm) {
               wx.switchTab({
-              url: '../servers/servers'
-            })
+                url: '../servers/servers'
+              })
             }
           }
         })
       }
     })
   },
-  updateCode:function(){
+  updateCode: function () {
     var that = this;
     var newToken = totp.getCode(this.data.secret);
     that.setData({
-      code:newToken
+      code: newToken
     })
   },
-  onPullDownRefresh:function(){
+  onPullDownRefresh: function () {
     this.updateCode();
   }
 })

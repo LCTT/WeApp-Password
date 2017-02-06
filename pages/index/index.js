@@ -18,9 +18,12 @@ Page({
           title: '扫描二维码出错',
           content: '您的二维码有误，是否要重新扫描？',
           success: function (res) {
-            if (res.confirm) {
-              that.scanCode();
-            }
+             if (res.confirm) {
+               that.scanCode();
+             }else{
+               
+             }
+           
           }
         })
       }
