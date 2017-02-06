@@ -8,7 +8,6 @@ Page({
     wx.getStorage({
       key: options.id,
       success: function (res) {
-        console.log(res.data);
         that.setData({
           keys: options.id,
           name: res.data.name,
