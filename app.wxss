@@ -33,3 +33,13 @@ page{
     text-align: left;
     font-size: 14px;
 }
+.footBtn{
+  width:50rpx;
+  height: 50rpx;
+   position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+  background-color: #20a0ff;
+  padding: 20rpx;
+  border-radius: 50rpx;
+}
