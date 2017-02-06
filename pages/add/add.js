@@ -7,7 +7,7 @@ Page({
       type: 'wgs84',
       success: function (res) {
         that.setData({
-          name: options.name,
+          name: decodeURI(options.name),
           secret: options.secret,
           username: options.username,
           latitude: res.latitude,
