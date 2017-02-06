@@ -12,7 +12,7 @@ Page({
 
   },
   scanCode: function () {
-    var that = this;
+   var that = this;
     wx.scanCode({
       success: function (res) {
         if (res.result.substr(0, 7) == 'otpauth') {
@@ -40,18 +40,23 @@ Page({
         }
       },
       fail: function (res) {
-        wx.showModal({
-          title: '扫描二维码出错',
-          content: '您的二维码有误，是否要重新扫描？',
-          success: function (res) {
-            if (res.confirm) {
-              that.scanCode();
-            } else {
+
+        if (res.errMsg == 'scanCode:fail cancel') {
+
+        } else {
+          wx.showModal({
+            title: '扫描二维码出错',
+            content: '您的二维码有误，是否要重新扫描？',
+            success: function (res) {
+              if (res.confirm) {
+                that.scanCode();
+              } else {
+
+              }
 
             }
-
-          }
-        })
+          })
+        }
       }
     })
   },
