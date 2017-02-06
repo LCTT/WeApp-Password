@@ -23,10 +23,11 @@ Page({
       data: {
         secret: this.data.secret,
         name: e.detail.value.name,
-        username: this.data.username,
+        username: e.detail.value.username,
         desc: e.detail.value.desc,
         latitude: this.data.latitude,
-        longitude: this.data.longitude
+        longitude: this.data.longitude,
+        signedBy:this.data.name
       },
       success: function (res) {
         wx.redirectTo({
