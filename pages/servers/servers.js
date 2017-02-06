@@ -4,6 +4,13 @@ Page({
   onLoad: function (options) {
     this.refreshData();
   },
+  onReady: function () {
+    var that = this;
+    setInterval(function () {
+      that.refreshData();
+    }, 1000)
+
+  },
   scanCode: function () {
     var that = this;
     wx.scanCode({

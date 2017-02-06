@@ -57,6 +57,13 @@ Page({
       }
     })
   },
+  onReady: function () {
+    var that = this;
+    setInterval(function () {
+      that.updateCode();
+    }, 10000)
+
+  },
   deleteOne: function (e) {
     var that = this;
     wx.removeStorage({
