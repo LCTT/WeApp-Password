@@ -5,6 +5,7 @@ Page({
     this.refreshData();
   },
   scanCode: function () {
+    var that = this;c
     wx.scanCode({
       success: function (res) {
         wx.navigateTo({
@@ -17,7 +18,7 @@ Page({
           content: '是否重新扫描？',
           success: function (res) {
             if (res.confirm) {
-              this.scanCode();
+              that.scanCode();
             }
           }
         })

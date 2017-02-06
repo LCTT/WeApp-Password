@@ -6,6 +6,7 @@ Page({
     //  console.log(longs)
   },
   scanCode: function () {
+    var that = this;
     wx.scanCode({
       success: function (res) {
         wx.navigateTo({
@@ -18,7 +19,7 @@ Page({
           content: '您的二维码有误，是否要重新扫描？',
           success: function (res) {
             if (res.confirm) {
-              this.scanCode();
+              that.scanCode();
             }
           }
         })
