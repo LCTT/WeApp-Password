@@ -28,7 +28,8 @@ Page({
         desc: e.detail.value.desc,
         latitude: this.data.latitude,
         longitude: this.data.longitude,
-        signedBy:this.data.name
+        signedBy:this.data.name,
+        key:UUID
       },
       success: function (res) {
         

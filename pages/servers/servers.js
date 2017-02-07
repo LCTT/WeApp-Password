@@ -5,10 +5,10 @@ Page({
     this.refreshData();
   },
   onReady: function () {
-    var that = this;
-    setInterval(function () {
-      that.refreshData();
-    }, 10000)
+    // var that = this;
+    // setInterval(function () {
+    //   that.refreshData();
+    // }, 10000)
 
   },
   scanCode: function () {
@@ -69,13 +69,11 @@ Page({
     that.data.servers = [];
     wx.getStorageInfo({
       success: function (res) {
+        var tmp_servers = that.data.servers;
         res.keys.forEach(function (value, index, array) {
-          var tmp_servers = that.data.servers;
-          var keys = value;
           tmp_servers.push(wx.getStorageSync(value));
           tmp_servers.forEach(function (value, index, array) {
             value.code = totp.getCode(value.secret);
-            value.keys = keys;
           })
           that.setData({
             servers: tmp_servers

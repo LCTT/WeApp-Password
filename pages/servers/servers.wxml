@@ -5,7 +5,7 @@
   <view class="page__bd">
     <view class="weui-cells__title">我添加的场景</view>
     <block wx:for="{{servers}}">
-      <navigator url="../info/info?id={{item.keys}}">
+      <navigator url="../info/info?id={{item.key}}">
         <view class="weui-cells">
           <view class="weui-form-preview">
             <view class="weui-form-preview__hd">
