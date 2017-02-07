@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">致谢</view>
+    <view class="page__desc">感谢为本产品提供帮助的企业与个人</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">企业</view>
+      <view class="weui-article__section">
+        <view class="weui-article__section">
+          <view class="weui-article__h3">Google</view>
+          <view class="weui-article__p">
+            本产品源自 Google 的项目 Google Authenticator
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-article">
+      <view class="weui-article__h1">个人</view>
+      <view class="weui-article__section">
+        <view class="weui-article__section">
+          <view class="weui-article__h3">russau</view>
+          <view class="weui-article__p">
+            提供了 TOTP ( Time-based One-time Password ) 算法的 JS 版本。
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

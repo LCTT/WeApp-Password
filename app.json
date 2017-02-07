@@ -10,6 +10,7 @@
         "pages/addSucc/addSucc",
         "pages/about/about",
         "pages/manual/manual",
+        "pages/thank/thank",
         "pages/linuxcnManual/linuxcnManual"
     ],
     "window": {
