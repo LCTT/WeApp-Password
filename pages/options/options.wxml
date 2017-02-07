@@ -41,6 +41,10 @@
         <view class="weui-cell__bd">调试</view>
         <view class="weui-cell__ft weui-cell__ft_in-access "></view>
       </navigator>
+       <view catchtap="cleanCache"class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">清除数据</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access "></view>
+      </view>
     </view>
   </view>
 </view>
