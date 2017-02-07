@@ -9,7 +9,7 @@
       <block wx:for="{{servers}}">
         <navigator url="../info/info?id={{item.keys}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <view class="weui-cell__bd">{{item.name}}</view>
-          <view class="weui-cell__ft weui-cell__ft_in-access">{{item.code}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{item.code}}</view>
         </navigator>
       </block>
     </view>

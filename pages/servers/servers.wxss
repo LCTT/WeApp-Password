@@ -1,1 +1,5 @@
-/* pages/servers/servers.wxss */
+.codeStyle{
+    color:#48c23d;
+font-weight:bold;
+
+}
