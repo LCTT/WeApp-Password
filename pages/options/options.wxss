@@ -2,7 +2,7 @@ contact-button {
   position: fixed;
   right: 50rpx;
   bottom: 50rpx;
-  background-color: #20a0ff;
+  background-color: #48c23d;
   padding: 20rpx;
   border-radius: 50rpx;
 }
