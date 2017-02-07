@@ -9,20 +9,20 @@
                 <view class="weui-article__section">
                     <view class="weui-article__p">
                     首先，先使用帐号密码或社会化登录来登录到 Linux 中国，登录成功后，点击右上角头像旁边的设置连接，进入个人设置页面
-                     <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-1.jpg" mode="aspectFit" style="height: 180px" />
+                     <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-1.jpg" mode="scaleToFill" style="width:700rpx;height:180px;" />
                     </view>
                     
                    
                     <view class="weui-article__h2">进入设置页面</view>
                     <view class="weui-article__p">
                       进入设置页面后，点击左下角的密码安全选项，进入到密码安全设置页面。进入后，填写旧密码。
-                       <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-2.jpg" mode="aspectFit" style="height: 180px" />
+                       <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-2.jpg" mode="scaleToFill" style="width:700rpx;height: 210px" />
                     </view>
                    
                 </view>
                  <view class="weui-article__h2">选择 Google 身份验证器</view>
                     <view class="weui-article__p">
-                     <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-3.jpg" mode="aspectFit" style="height: 180px" />
+                     <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-3.jpg" mode="scaleToFill" style="width:700rpx;height: 180px" />
                       
                     </view>
                     <view class="weui-article__p">
@@ -30,7 +30,7 @@
                    首先，在安全提问中选择 Google 身份验证器；
                    然后，使用本程序提供的扫描二维码的功能扫描该二维码，填写场景的信息，填写具体的信息，并保存；
                    保存成功后，进入详情页，可以获取到当前最新的密码，将最新的密码填写到页面中的回答里，点击保存，即可绑定。
-                       <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-4.jpg" mode="aspectFit" style="height: 280px" />
+                       <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-4.jpg" mode="scaleToFill" style="width:700rpx;height: 350px" />
                     </view>
             </view>
         </view>
