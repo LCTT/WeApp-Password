@@ -6,7 +6,7 @@ page{
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
 .page__hd {
-    padding:20px 40px;
+    padding:40px 40px;
 }
 .page__bd {
     padding-bottom: 40px;
