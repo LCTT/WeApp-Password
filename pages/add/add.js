@@ -18,8 +18,9 @@ Page({
 
   },
   submitData: function (e) {
+    var UUID = this.getUUID();
     wx.setStorage({
-      key: this.getUUID(),
+      key: UUID,
       data: {
         secret: this.data.secret,
         name: e.detail.value.name,
@@ -30,8 +31,9 @@ Page({
         signedBy:this.data.name
       },
       success: function (res) {
+        
         wx.redirectTo({
-          url: '../addSucc/addSucc'
+          url: '../addSucc/addSucc?id='+UUID
         })
       },
       fail: function () {

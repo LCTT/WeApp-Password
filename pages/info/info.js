@@ -107,6 +107,8 @@ Page({
     this.updateCode();
   },
   navigateBack: function () {
-    wx.navigateBack()
+    wx.switchTab({
+      url: '../servers/servers'
+    })
   }
 })
