@@ -9,7 +9,7 @@
         </view>
         <view class="weui-msg__opr-area">
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary" catchtap="returnIndex">返回场景管理</button>
+                <button class="weui-btn" type="primary" catchtap="returnIndex">查看密码</button>
                 <!--<button class="weui-btn" type="default">返回首页</button>-->
             </view>
         </view>
