@@ -1,39 +1,39 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">Linux 中国 使用说明</view>
+        <view class="page__title">在『Linux 中国』网站上使用本验证器</view>
     </view>
     <view class="page__bd">
         <view class="weui-article">
-            <view class="weui-article__h1">登录账户</view>
-            <view class="weui-article__section">
-                <view class="weui-article__section">
-                    <view class="weui-article__p">
-                    首先，先使用帐号密码或社会化登录来登录到 Linux 中国，登录成功后，点击右上角头像旁边的设置连接，进入个人设置页面
-                     <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-1.jpg" mode="scaleToFill" style="width:700rpx;height:180px;" />
-                    </view>
-                    
-                   
-                    <view class="weui-article__h2">进入设置页面</view>
-                    <view class="weui-article__p">
-                      进入设置页面后，点击左下角的密码安全选项，进入到密码安全设置页面。进入后，填写旧密码。
-                       <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-2.jpg" mode="scaleToFill" style="width:700rpx;height: 210px" />
-                    </view>
-                   
-                </view>
-                 <view class="weui-article__h2">选择 Google 身份验证器</view>
-                    <view class="weui-article__p">
-                     <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-3.jpg" mode="scaleToFill" style="width:700rpx;height: 180px" />
-                      
-                    </view>
-                    <view class="weui-article__p">
-                   填写旧密码后，点击安全提问。
-                   首先，在安全提问中选择 Google 身份验证器；
-                   然后，使用本程序提供的扫描二维码的功能扫描该二维码，填写场景的信息，填写具体的信息，并保存；
-                   保存成功后，进入详情页，可以获取到当前最新的密码，将最新的密码填写到页面中的回答里，点击保存，即可绑定。
-                       <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-4.jpg" mode="scaleToFill" style="width:700rpx;height: 350px" />
-                    </view>
+            <view class="weui-article__h2">登录账户</view>
+            <view class="weui-article__p">
+            首先，先使用帐号密码或社会化登录来登录到 Linux 中国，登录成功后，点击右上角头像旁边的设置连接，进入个人设置页面。
+                <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-1.jpg" mode="scaleToFill" style="width:700rpx;height:180px;" />
+            </view>
+            <view class="weui-article__h2">进入设置页面</view>
+            <view class="weui-article__p">
+                进入设置页面后，点击左下角的密码安全选项，进入到密码安全设置页面。
+                <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-2.jpg" mode="scaleToFill" style="width:700rpx;height: 210px" />
+            </view>
+            <view class="weui-article__h2">设置验证器</view>
+            <view class="weui-article__p">
+                <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-3.jpg" mode="scaleToFill" style="width:700rpx;height: 180px" />
+            </view>
+            <view class="weui-article__p">
+            点击“安全提问”，选择最下面的 “Google 身份验证器”，会在下方显示一个用于绑定场景的“二维码”及其“回答”。
+                <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-4.jpg" mode="scaleToFill" style="width:700rpx;height: 350px" />
+            </view>
+            <view class="weui-article__p">
+            a、用本程序提供的扫描二维码的功能扫描该二维码；扫描成功后，会小程序中会显示场景的信息，可以根据情况修改，或直接点击“增加场景”完成；然后会返回到该场景的详情页，并显示当前的六位数字的验证密码。
+            </view>
+            <view class="weui-article__p">
+            b、将显示的六位数字的验证密码输入到“安全提问”中的验证器 “回答”中。
+            </view>
+            <view class="weui-article__p">
+            c、点击“密码安全”页面下方的“保存”，即可完成绑定。
+            </view>
+            <view class="weui-article__p">
+            你可以在“场景详情”页“生成二维码”，然后将生成的二维码打印贴到附近，以后可以直接扫描使用。
             </view>
         </view>
-         
     </view>
 </view>
