@@ -1,5 +1,21 @@
-.codeStyle{
-    color:#48c23d;
-font-weight:bold;
+.codeStyle {
+  color: #48c23d;
+  font-weight: bold;
+  font-size: 70rpx;
+}
 
+.weui-form-preview__hd {
+  text-align: left;
+  padding:5px 15px;
+
+}
+
+.weui-form-preview__bd {
+  text-align: left;
+  padding:0px 15px 5px 15px;
+
+}
+
+.weui-form-preview::after, .weui-form-preview__hd::after {
+    border: 0
 }

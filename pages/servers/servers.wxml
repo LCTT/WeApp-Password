@@ -4,15 +4,23 @@
   </view>
   <view class="page__bd">
     <view class="weui-cells__title">我添加的场景</view>
-    <view class="weui-cells weui-cells_after-title">
-      
-      <block wx:for="{{servers}}">
-        <navigator url="../info/info?id={{item.keys}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-          <view class="weui-cell__bd">{{item.name}}</view>
-          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{item.code}}</view>
-        </navigator>
-      </block>
-    </view>
+    <block wx:for="{{servers}}">
+      <navigator url="../info/info?id={{item.keys}}">
+        <view class="weui-cells">
+          <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+              <view class="codeStyle">{{item.code}}</view>
+            </view>
+            <view class="weui-form-preview__bd">
+              <view class="weui-form-preview__item">
+                {{item.name}}({{item.username}})
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
 </view>
-<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA20lEQVR4Xu3ZQQ7CMAxE0fhkwMmBkxlV7Gi6nUTi9QJTWakz/7fGgqe7n7PYqnqkX6fSgUded/fFAOLvEw80ACfAJ2AHWIJuAdegHqAITSZQVfFiFg/UBDVBTVAT1AQ1QU1QE9QENcHzBFRhLACG4nAWD0SDaHAzGuzu1xjjtuIf4QaZ7zIAJ8AnYAf89RJcsYkpMUqMEqPEKDFKjBI7TYAT5AQ5wbiiiwdygpzgZk4QDS6YAByGw3AYDsNhOAyH4fDvBPgAPoAPiON5PJAP+PqA44/07Ba4p9nsAw3oBL4MD/fmAAAAAElFTkSuQmCC" catchtap="scanCode" class="footBtn"></image>
+<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA20lEQVR4Xu3ZQQ7CMAxE0fhkwMmBkxlV7Gi6nUTi9QJTWakz/7fGgqe7n7PYqnqkX6fSgUded/fFAOLvEw80ACfAJ2AHWIJuAdegHqAITSZQVfFiFg/UBDVBTVAT1AQ1QU1QE9QENcHzBFRhLACG4nAWD0SDaHAzGuzu1xjjtuIf4QaZ7zIAJ8AnYAf89RJcsYkpMUqMEqPEKDFKjBI7TYAT5AQ5wbiiiwdygpzgZk4QDS6YAByGw3AYDsNhOAyH4fDvBPgAPoAPiON5PJAP+PqA44/07Ba4p9nsAw3oBL4MD/fmAAAAAElFTkSuQmCC"
+catchtap="scanCode" class="footBtn"></image>
