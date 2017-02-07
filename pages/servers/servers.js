@@ -5,10 +5,10 @@ Page({
     this.refreshData();
   },
   onReady: function () {
-    // var that = this;
-    // setInterval(function () {
-    //   that.refreshData();
-    // }, 10000)
+    var that = this;
+    setInterval(function () {
+      that.refreshData();
+    }, 10000)
 
   },
   scanCode: function () {
