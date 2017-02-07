@@ -29,7 +29,10 @@
         <view class="weui-cell__bd">关于 Linux 中国</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
-     
+     <navigator url="../debug/debug" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">调试</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access "></view>
+        </navigator>
     </view>
   </view>
 </view>

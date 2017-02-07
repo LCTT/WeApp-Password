@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">Debug</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      
+ 
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">纬度</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{latitude}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">经度</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{longitude}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">语言</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{language}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">型号</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{model}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">系统</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{system}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">微信版本</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{version}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">屏幕高度</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{windowHeight}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">屏幕宽度</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{windowWidth}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">空间限制</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{size}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">易用空间</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{limitSize}}</view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">存储数据</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{lenth}}</view>
+        </navigator>
+    </view>
+  </view>
+</view>

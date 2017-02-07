@@ -1,7 +1,8 @@
 {
     "pages": [
-       
+        
         "pages/index/index",
+        "pages/debug/debug",
         "pages/servers/servers",
         "pages/info/info",
         "pages/qrcode/qrcode",
