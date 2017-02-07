@@ -1,16 +1,16 @@
 {
     "pages": [
-        
         "pages/index/index",
         "pages/debug/debug",
         "pages/servers/servers",
         "pages/info/info",
         "pages/qrcode/qrcode",
-        "pages/options/options", 
+        "pages/options/options",
         "pages/add/add",
         "pages/addSucc/addSucc",
         "pages/about/about",
-        "pages/manual/manual"
+        "pages/manual/manual",
+        "pages/linuxcnManual/linuxcnManual"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -28,7 +28,8 @@
         "selectedColor": "#48c23d",
         "borderStyle": "black",
         "backgroundColor": "#fff",
-        "list": [{
+        "list": [
+            {
                 "pagePath": "pages/index/index",
                 "text": "获取密码",
                 "iconPath": "images/password.png",
