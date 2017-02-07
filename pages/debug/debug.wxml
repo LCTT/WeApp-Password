@@ -39,16 +39,16 @@
           <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{windowWidth}}</view>
         </navigator>
         <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-          <view class="weui-cell__bd">空间限制</view>
-          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{size}}</view>
+          <view class="weui-cell__bd">已用空间</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{size}}K</view>
         </navigator>
         <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-          <view class="weui-cell__bd">易用空间</view>
-          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{limitSize}}</view>
+          <view class="weui-cell__bd">空间限制</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{limitSize}}K</view>
         </navigator>
         <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <view class="weui-cell__bd">存储数据</view>
-          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{lenth}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access codeStyle">{{lenth}}条</view>
         </navigator>
     </view>
   </view>
