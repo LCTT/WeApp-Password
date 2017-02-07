@@ -9,7 +9,7 @@ Page({
         that.setData({
           name: decodeURI(options.name),
           secret: options.secret,
-          username: options.username,
+          username: decodeURI(options.username),
           latitude: res.latitude,
           longitude: res.longitude
         });
