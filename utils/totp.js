@@ -33,6 +33,7 @@ function getCode(secret) {
     var offset = hex2dec(hmac.substring(hmac.length - 1));
     var otp = (hex2dec(hmac.substr(offset * 2, 8)) & hex2dec('7fffffff')) + '';
     otp = (otp).substr(otp.length - 6, 6);
-    return otp;
+    var str = otp.substr(0,3)+' '+otp.substr(3,6)
+    return str;
 }
 module.exports.getCode = getCode
