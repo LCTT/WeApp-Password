@@ -4,32 +4,32 @@ Page({
   onLoad: function (options) {
     var that = this;
     if (wx.getStorageSync(options.secret) == '') {
-      
+
     } else {
-        wx.showModal({
-           title: '该场景已经添加过！',
-          content: '当前场景已经添加过！点击取消继续修改，数据将被覆盖！',
-          success: function (res) {
-            if (res.confirm) {
-              wx.switchTab({
-                url: '../servers/servers'
-              })
-            }
+      wx.showModal({
+        title: '该场景已经添加过！',
+        content: '当前场景已经添加过！点击取消继续修改，数据将被覆盖！',
+        success: function (res) {
+          if (res.confirm) {
+            wx.switchTab({
+              url: '../servers/servers'
+            })
           }
-        })
+        }
+      })
     }
     wx.getLocation({
-        type: 'wgs84',
-        success: function (res) {
-          that.setData({
-            name: decodeURI(options.name),
-            secret: options.secret,
-            username: decodeURI(options.username),
-            latitude: res.latitude,
-            longitude: res.longitude
-          });
-        },
-      })
+      type: 'wgs84',
+      success: function (res) {
+        that.setData({
+          name: decodeURI(options.name),
+          secret: options.secret,
+          username: decodeURI(options.username),
+          latitude: res.latitude,
+          longitude: res.longitude
+        });
+      },
+    })
 
 
   },
