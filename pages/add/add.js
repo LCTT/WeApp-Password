@@ -45,7 +45,8 @@ Page({
         latitude: that.data.latitude,
         longitude: that.data.longitude,
         signedBy: that.data.name,
-        key: that.data.secret
+        key: that.data.secret,
+        time:0
       },
       success: function (res) {
 

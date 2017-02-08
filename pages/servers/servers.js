@@ -1,6 +1,8 @@
 const totp = require('../../utils/totp.js');
 Page({
-  data: {},
+  data: {
+    servers: []
+  },
   onLoad: function (options) {
     this.refreshData();
   },
@@ -11,8 +13,74 @@ Page({
     }, 1000)
 
   },
+
+  refreshData: function () {
+    var that = this;
+    wx.getStorageInfo({
+      success: function (res) {
+        var keys = res.keys;
+        if(keys.length == 0){
+          that.setData({
+            servers:[]
+          })
+        }
+        if (keys.length == that.data.servers.length) {
+          var server = that.data.servers;
+          server.forEach(function (value, index, array) {
+            var newCode =totp.getCode(value.secret); 
+            if(newCode != value.code){
+              value.time = 0
+            }
+            value.code = newCode;
+            value.time += 3.3
+            if( value.time > 100){
+              value.time = 0
+            }
+          })
+          that.setData({
+            servers: server
+          })
+
+        } else {
+          if (keys.length <= that.data.servers.length) {
+            keys.forEach(function (i, v, array) {
+              var data = wx.getStorageSync(i);
+              var server = [];
+              server.push(data);
+              server.forEach(function (value, index, array) {
+                value.code = totp.getCode(value.secret);
+              });
+              that.setData({
+                servers: server
+              });
+            });
+          } else {
+            keys.forEach(function (i, v, array) {
+              var data = wx.getStorageSync(i);
+              var server = that.data.servers;
+              server.push(data);
+              server.forEach(function (value, index, array) {
+                value.code = totp.getCode(value.secret);
+              })
+              that.setData({
+                servers: server
+              })
+            })
+          }
+        }
+
+      }
+    })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '运维密码！帮助你更好的管理你的密码！',
+      desc: 'LinuxCN 出品',
+      path: '/pages/servers/servers'
+    }
+  },
   scanCode: function () {
-   var that = this;
+    var that = this;
     wx.scanCode({
       success: function (res) {
         if (res.result.substr(0, 7) == 'otpauth') {
@@ -63,44 +131,5 @@ Page({
   onPullDownRefresh: function () {
     this.refreshData();
     wx.stopPullDownRefresh();
-  },
-  refreshData: function () {
-    var that = this;
-    that.data.servers = [];
-    wx.getStorageInfo({
-      success: function (res) {
-        var tmp_servers = that.data.servers;
-        res.keys.forEach(function (value, index, array) {
-          tmp_servers.push(wx.getStorageSync(value));
-          tmp_servers.forEach(function (value, index, array) {
-            value.code = totp.getCode(value.secret);
-          })
-          that.setData({
-            servers: tmp_servers
-          })
-        })
-      },
-      fail: function () {
-        wx.showModal({
-          title: '提示',
-          content: '刷新失败，是否重新刷新？',
-          success: function (res) {
-            if (res.confirm) {
-              this.refreshData();
-            }
-          }
-        })
-      },
-      complete: function () {
-        // complete
-      }
-    })
-  },
-  onShareAppMessage: function () {
-    return {
-      title: '运维密码！帮助你更好的管理你的密码！',
-      desc: 'LinuxCN 出品',
-      path: '/pages/servers/servers'
-    }
   }
 })
