@@ -19,21 +19,21 @@ Page({
     wx.getStorageInfo({
       success: function (res) {
         var keys = res.keys;
-        if(keys.length == 0){
+        if (keys.length == 0) {
           that.setData({
-            servers:[]
+            servers: []
           })
         }
         if (keys.length == that.data.servers.length) {
           var server = that.data.servers;
           server.forEach(function (value, index, array) {
-            var newCode =totp.getCode(value.secret); 
-            if(newCode != value.code){
+            var newCode = totp.getCode(value.secret);
+            if (newCode != value.code) {
               value.time = 0
             }
             value.code = newCode;
             value.time += 3.3
-            if( value.time > 100){
+            if (value.time > 100) {
               value.time = 0
             }
           })
@@ -42,31 +42,19 @@ Page({
           })
 
         } else {
-          if (keys.length <= that.data.servers.length) {
-            keys.forEach(function (i, v, array) {
-              var data = wx.getStorageSync(i);
-              var server = [];
-              server.push(data);
-              server.forEach(function (value, index, array) {
-                value.code = totp.getCode(value.secret);
-              });
-              that.setData({
-                servers: server
-              });
-            });
-          } else {
-            keys.forEach(function (i, v, array) {
-              var data = wx.getStorageSync(i);
-              var server = that.data.servers;
-              server.push(data);
-              server.forEach(function (value, index, array) {
-                value.code = totp.getCode(value.secret);
-              })
-              that.setData({
-                servers: server
-              })
+          var server = [];
+          keys.forEach(function(i,v,array){
+            var data = wx.getStorageSync(i);
+            
+            server.push(data);
+            server.forEach(function(value,index,array){
+              value.code = totp.getCode(value.secret);
             })
-          }
+
+            that.setData({
+              servers:server
+            })
+          })
         }
 
       }
@@ -131,5 +119,14 @@ Page({
   onPullDownRefresh: function () {
     this.refreshData();
     wx.stopPullDownRefresh();
+  },
+  isInArray: function (arr, obj) {
+    var i = arr.length;
+    while (i--) {
+      if (arr[i] === obj) {
+        return true;
+      }
+    }
+    return false;
   }
 })
