@@ -17,6 +17,7 @@
               </view>
             </view>
           </view>
+        <progress percent="66" stroke-width='4' />
         </view>
       </navigator>
     </block>
