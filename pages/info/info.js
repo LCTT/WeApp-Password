@@ -17,43 +17,63 @@ Page({
           code: totp.getCode(res.data.secret),
         })
       },
-      fail: function () {
-        wx.showModal({
-          title: '数据读取错误！',
-          content: '当前二维码不正确或场景不是你创建的！请确认后重新扫描！',
-          success: function (res) {
-            if (res.confirm) {
-              var that = this;
-              wx.scanCode({
-                success: function (res) {
-                  wx.redirectTo({
-                    url: '../info/info?id=' + res.result
-                  })
-                },
-                fail: function (res) {
-                  wx.showModal({
-                    title: '扫描二维码出错',
-                    content: '您的二维码有误，是否要重新扫描？',
-                    success: function (res) {
-                      if (res.confirm) {
-                        that.scanCode();
-                      } else {
-                        wx.switchTab({
-                          url: '../index/index'
-                        })
-                      }
-
-                    }
-                  })
-                }
-              })
-            } else {
-              wx.switchTab({
-                url: '../index/index'
-              })
+      fail: function (e) {
+        if (e.errMsg == 'getStorage:fail data not found') {
+          wx.showModal({
+            title: "权限不足！",
+            content: "您无权查看当前场景！",
+            success: function (res) {
+              if (res.confirm) {
+                wx.switchTab({
+                  url: '../servers/servers'
+                })
+              } else {
+                wx.switchTab({
+                  url: '../servers/servers'
+                })
+              }
             }
-          }
-        })
+          })
+        } else {
+
+          wx.showModal({
+            title: '数据读取错误！',
+            content: '当前二维码不正确！请确认后重新扫描！',
+            success: function (res) {
+              if (res.confirm) {
+                var that = this;
+                wx.scanCode({
+                  success: function (res) {
+                    wx.redirectTo({
+                      url: '../info/info?id=' + res.result
+                    })
+                  },
+                  fail: function (res) {
+                    wx.showModal({
+                      title: '扫描二维码出错',
+                      content: '您的二维码有误，是否要重新扫描？',
+                      success: function (res) {
+                        if (res.confirm) {
+                          that.scanCode();
+                        } else {
+                          wx.switchTab({
+                            url: '../index/index'
+                          })
+                        }
+
+                      }
+                    })
+                  }
+                })
+              } else {
+                wx.switchTab({
+                  url: '../index/index'
+                })
+              }
+            }
+          })
+        }
+
       }
     })
   },
