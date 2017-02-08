@@ -1,8 +1,9 @@
 {
     "pages": [
+        "pages/servers/servers",
+        "pages/indexcode/indexcode",
         "pages/index/index",
         "pages/debug/debug",
-        "pages/servers/servers",
         "pages/info/info",
         "pages/qrcode/qrcode",
         "pages/options/options",
@@ -31,7 +32,7 @@
         "backgroundColor": "#fff",
         "list": [
             {
-                "pagePath": "pages/index/index",
+                "pagePath": "pages/indexcode/indexcode",
                 "text": "获取密码",
                 "iconPath": "images/password.png",
                 "selectedIconPath": "images/password_hl.png"
