@@ -91,14 +91,13 @@ Page({
             }
           })
         } else {
+         
           wx.showToast({
-            title: "识别到密码信息二维码!",
-            icon: 'success',
+            title: "二维码有误！请重新扫描",
+            icon: 'loading',
             duration: 2000,
             success: function () {
-              wx.navigateTo({
-                url: '../info/info?id=' + res.result
-              })
+              
             }
           })
         }
