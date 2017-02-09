@@ -18,7 +18,7 @@
                 <view class="weui-footer__links">
                     <navigator url="" class="weui-footer__link">Linux中国</navigator>
                 </view>
-                <view class="weui-footer__text">Copyright © 2008-2016 Linux中国</view>
+                <view class="weui-footer__text">Copyright © 2008-2017 Linux中国</view>
             </view>
         </view>
     </view>
