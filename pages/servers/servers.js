@@ -10,11 +10,12 @@ Page({
   onReady: function () {
     var that = this;
     setInterval(function () {
-      var timestamp = (new Date()).getTime().toString().substr(0, 10);
-      var timeHook = timestamp % 30;
+      var timestamp = (new Date()).getTime().toString().substr(0, 11);
+      var timeHook = timestamp % 300;
+      console.log(timestamp,timeHook)
       if (timeHook != 0) {
         that.setData({
-          timer: timeHook * 3.3333334
+          timer: timeHook * 0.3333334
         })
       } else {
         that.setData({
@@ -23,7 +24,7 @@ Page({
         that.refreshData();
       }
 
-    }, 1000)
+    }, 100)
 
   },
 
