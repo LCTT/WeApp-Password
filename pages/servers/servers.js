@@ -14,7 +14,7 @@ Page({
       var timeHook = timestamp % 30;
       if (timeHook != 0) {
         that.setData({
-          timer: timeHook * 3.4
+          timer: timeHook * 3.3333334
         })
       } else {
         that.setData({
