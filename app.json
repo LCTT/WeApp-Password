@@ -1,7 +1,6 @@
 {
     "pages": [
         "pages/servers/servers",
-        "pages/indexcode/indexcode",
         "pages/index/index",
         "pages/debug/debug",
         "pages/info/info",
@@ -31,12 +30,7 @@
         "borderStyle": "black",
         "backgroundColor": "#fff",
         "list": [
-            {
-                "pagePath": "pages/indexcode/indexcode",
-                "text": "获取密码",
-                "iconPath": "images/password.png",
-                "selectedIconPath": "images/password_hl.png"
-            },
+           
             {
                 "pagePath": "pages/servers/servers",
                 "text": "场景管理",
