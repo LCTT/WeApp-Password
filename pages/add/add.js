@@ -8,9 +8,11 @@ Page({
     } else {
       wx.showModal({
         title: '该场景已经添加过！',
-        content: '当前场景已经添加过！点击取消继续修改，数据将被覆盖！',
+        content: '当前场景已经添加过！点击确认继续修改，数据将被覆盖！',
         success: function (res) {
           if (res.confirm) {
+
+          } else {
             wx.switchTab({
               url: '../servers/servers'
             })
