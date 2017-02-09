@@ -10,6 +10,10 @@ Page({
   onReady: function () {
     var that = this;
     setInterval(function () {
+     
+      if(that.data.servers.length != wx.getStorageInfoSync().keys.length){
+        that.refreshData();
+      }
       var timestamp = (new Date()).getTime().toString().substr(0, 10);
       var timeHook = timestamp % 30;
       if (timeHook != 0) {
