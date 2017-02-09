@@ -10,8 +10,8 @@ Page({
   onReady: function () {
     var that = this;
     setInterval(function () {
-     
-      if(that.data.servers.length != wx.getStorageInfoSync().keys.length){
+
+      if (that.data.servers.length != wx.getStorageInfoSync().keys.length) {
         that.refreshData();
       }
       var timestamp = (new Date()).getTime().toString().substr(0, 10);
@@ -91,13 +91,13 @@ Page({
             }
           })
         } else {
-         
+
           wx.showToast({
-            title: "二维码有误！请重新扫描",
+            title: "场景二维码需要使用微信扫一扫扫描哦！",
             icon: 'loading',
             duration: 2000,
             success: function () {
-              
+
             }
           })
         }
