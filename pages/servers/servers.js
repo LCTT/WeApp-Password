@@ -10,7 +10,7 @@ Page({
   onReady: function () {
     var that = this;
     setInterval(function () {
-      var timestamp = new Date().getTime().toString().substr(0, 10);
+      var timestamp = (new Date()).getTime().toString().substr(0, 10);
       var timeHook = timestamp % 30;
       if (timeHook != 0) {
         that.setData({
