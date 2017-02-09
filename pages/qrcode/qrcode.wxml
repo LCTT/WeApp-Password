@@ -1,11 +1,8 @@
 <view class="container-box">
     <view class="img-box">
-        <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+        <image src="https://linux.cn/weixin/api/otp.php?qrcode&id={{id}}" catchtap="alertInfo" catchlongtap="previewImg" ></image>
     </view>
     <form bindsubmit="formSubmit">
         <button formType="submit" class="mybtn" type="primary">返回场景管理</button>
     </form>
-</view>
-<view hidden="{{maskHidden}}" class="mask"></view>
-<view class="canvas-box">
 </view>
