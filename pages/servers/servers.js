@@ -12,7 +12,6 @@ Page({
     setInterval(function () {
       var timestamp = (new Date()).getTime().toString().substr(0, 11);
       var timeHook = timestamp % 300;
-      console.log(timestamp,timeHook)
       if (timeHook != 0) {
         that.setData({
           timer: timeHook * 0.3333334
