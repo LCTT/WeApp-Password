@@ -2,7 +2,6 @@
   <view class="page__bd">
     <form bindsubmit="submitData">
       <view class="weui-cells__title" style="color:#1aad19;">签发人:{{name}}</view>
-      <view class="weui-cells__title" style="color:#1aad19;">种子:{{secret}}</view>
       <view class="weui-cells__title" style="color:#1aad19;">经纬度：{{latitude}},{{longitude}}</view>
       <view class="weui-cells__title">帐号</view>
       <view class="weui-cells weui-cells_after-title">
