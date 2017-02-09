@@ -2,3 +2,6 @@
   color: #48c23d;
   font-weight: bold;
 }
+.weui-form-preview__hd::after {
+ border-bottom: 0px;
+}
