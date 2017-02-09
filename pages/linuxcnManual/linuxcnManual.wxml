@@ -19,6 +19,9 @@
                 <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-3.jpg" mode="scaleToFill" style="width:700rpx;height: 180px" />
             </view>
             <view class="weui-article__p">
+            在“旧密码”处输入你原先的密码。
+            </view>
+            <view class="weui-article__p">
             点击“安全提问”，选择最下面的 “Google 身份验证器”，会在下方显示一个用于绑定场景的“二维码”及其“回答”。
                 <image class="weui-article__img" src="https://linux.cn/static/image/otp/linuxcn-otpsetup-4.jpg" mode="scaleToFill" style="width:700rpx;height: 350px" />
             </view>
