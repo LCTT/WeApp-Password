@@ -1,7 +1,8 @@
 const totp = require('../../utils/totp.js');
 Page({
   data: {
-    servers: []
+    servers: [],
+    timer: 0
   },
   onLoad: function (options) {
     this.refreshData();
@@ -9,7 +10,19 @@ Page({
   onReady: function () {
     var that = this;
     setInterval(function () {
-      that.refreshData();
+      var timestamp = new Date().getTime().toString().substr(0, 10);
+      var timeHook = timestamp % 30;
+      if (timeHook != 0) {
+        that.setData({
+          timer: timeHook * 3.4
+        })
+      } else {
+        that.setData({
+          timer: 0
+        })
+        that.refreshData();
+      }
+
     }, 1000)
 
   },
@@ -28,14 +41,7 @@ Page({
           var server = that.data.servers;
           server.forEach(function (value, index, array) {
             var newCode = totp.getCode(value.secret);
-            if (newCode != value.code) {
-              value.time = 0
-            }
             value.code = newCode;
-            value.time += 3.3
-            if (value.time > 100) {
-              value.time = 0
-            }
           })
           that.setData({
             servers: server
@@ -43,16 +49,14 @@ Page({
 
         } else {
           var server = [];
-          keys.forEach(function(i,v,array){
+          keys.forEach(function (i, v, array) {
             var data = wx.getStorageSync(i);
-            
             server.push(data);
-            server.forEach(function(value,index,array){
+            server.forEach(function (value, index, array) {
               value.code = totp.getCode(value.secret);
             })
-
             that.setData({
-              servers:server
+              servers: server
             })
           })
         }

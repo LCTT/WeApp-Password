@@ -1,7 +1,7 @@
 const totp = require('../../utils/totp.js');
 Page({
   data: {
-
+    timer:0
   },
   onLoad: function (options) {
     var that = this;
@@ -80,7 +80,19 @@ Page({
   onReady: function () {
     var that = this;
     setInterval(function () {
-      that.updateCode();
+       var timestamp = new Date().getTime().toString().substr(0,10);
+       var timeHook = timestamp%30;
+       if( timeHook != 0 ){
+          that.setData({
+            timer:timeHook*3.4
+          })
+       }else{
+         that.setData({
+            timer:0
+          })
+        that.updateCode();
+       }
+      
     }, 1000)
 
   },

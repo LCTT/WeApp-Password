@@ -5,10 +5,12 @@
     </view>
     <view class="page__bd">
         <view class="weui-form-preview">
+            
             <view class="weui-form-preview__hd">
                 <view class="weui-form-preview__label">最新密码</view>
                 <view class="weui-form-preview__value_in-hd codeStyle">{{code}}</view>
             </view>
+            <progress percent="{{timer}}" stroke-width="4" />
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">场景名</view>
