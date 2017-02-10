@@ -65,8 +65,7 @@ Page({
         if (keys.length == that.data.servers.length) {
           var server = that.data.servers;
           server.forEach(function (value, index, array) {
-            var newCode = totp.getCode(value.secret);
-            value.code = newCode;
+            value.code = totp.getCode(value.secret);
           })
           that.setData({
             servers: server
