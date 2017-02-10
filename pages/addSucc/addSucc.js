@@ -8,6 +8,9 @@ Page({
     })
   },
   returnIndex:function(){
+    /*
+     * 使用跳转函数跳转到指定页面
+     */
     wx.navigateTo({
       url: '../info/info?id='+this.data.id
     })

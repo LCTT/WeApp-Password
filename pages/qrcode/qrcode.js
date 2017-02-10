@@ -1,6 +1,9 @@
 Page({
   onLoad:function(options){
     var that = this;
+    /**
+     * 将ID渲染到页面内。
+     */
     that.setData({
       id:options.id
     })
@@ -10,6 +13,9 @@ Page({
       url: '../servers/servers',
     })
   },
+  /**
+   * 预览函数，后续将图片缓存到本地进行预览。
+   */
   previewImg:function(e){
     var img = "https://linux.cn/weixin/api/otp.php?qrcode&id="+ this.data.id
     wx.previewImage({

@@ -5,6 +5,9 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
+    /**
+     * 使用getStorage方法来加载数据。如果加载失败则提示无权限，并返回场景列表。后续地点感知功能上线后，调整至感知页面，体验更佳。
+     */
     wx.getStorage({
       key: options.id,
       success: function (res) {
@@ -41,6 +44,9 @@ Page({
   },
   onReady: function () {
     var that = this;
+    /**
+     * 进行时间判断，如果时间在30的整除点上，计算一次code，如果不是在时间点上，则只是变更进度条数据
+     */
     setInterval(function () {
        var timestamp = new Date().getTime().toString().substr(0,10);
        var timeHook = timestamp%30;
@@ -60,9 +66,15 @@ Page({
   },
   deleteOne: function (e) {
     var that = this;
+    /**
+     * 使用removeStorage方法来删除数据。
+     */
     wx.removeStorage({
       key: that.data.keys,
       success: function (res) {
+        /**
+         * 提示删除场景成功。并调用switchTab方法回到场景列表页。后续考虑跳转到场景感知页面。
+         */
         wx.showToast({
           title: '删除场景成功',
           icon: 'success',
@@ -76,6 +88,9 @@ Page({
 
       },
       fail: function () {
+        /**
+         * 如果无法删除，提示无法删除，并请求联系管理员，协助排除故障。
+         */
         wx.showModal({
           title: '删除失败！',
           content: '当前场景无法删除，请联系管理员！',
@@ -92,15 +107,24 @@ Page({
   },
   updateCode: function () {
     var that = this;
+    /**
+     * secret存放在页面的data中，直接调用totp.js方法即可生成新的code
+     */
     var newToken = totp.getCode(this.data.secret);
     that.setData({
       code: newToken
     })
   },
   onPullDownRefresh: function () {
+    /**
+     * 下拉强制刷新更新数据。
+     */
     this.updateCode();
   },
   navigateBack: function () {
+    /**
+     * 调用switch方法来响应右下角的返回按钮。
+     */
     wx.switchTab({
       url: '../servers/servers'
     })
