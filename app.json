@@ -13,7 +13,8 @@
         "pages/thank/thank",
         "pages/linuxcnManual/linuxcnManual",
         "pages/import/import",
-        "pages/backup/backup"
+        "pages/backup/backup",
+        "pages/backupImg/backupImg"
     ],
     "window": {
         "backgroundTextStyle": "light",
