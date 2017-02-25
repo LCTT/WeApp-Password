@@ -1,8 +1,25 @@
 // pages/backup/backup.js
 Page({
-  data:{},
+  data:{
+    key:[]
+  },
   onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+    var that = this;
+    wx.showToast({
+      "title":"加载本地数据中",
+      "icon":"loading",
+      "duration":1000
+    })
+    
+    var secret = wx.getStorageInfoSync();
+    secret.keys.forEach(function(e){
+      var new_key = that.data.key;
+      new_key.push(wx.getStorageSync(e))
+      that.setData({
+        key : new_key
+      });
+    
+    });
   },
   onReady:function(){
     // 页面渲染完成
@@ -15,5 +32,10 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  redirectTo:function(){
+    wx.navigateTo({
+      url: '../backupImg/backupImg'
+    })
   }
 })
