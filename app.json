@@ -11,7 +11,9 @@
         "pages/about/about",
         "pages/manual/manual",
         "pages/thank/thank",
-        "pages/linuxcnManual/linuxcnManual"
+        "pages/linuxcnManual/linuxcnManual",
+        "pages/import/import",
+        "pages/backup/backup"
     ],
     "window": {
         "backgroundTextStyle": "light",
