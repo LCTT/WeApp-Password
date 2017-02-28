@@ -1,9 +1,9 @@
 <view class="page">
   <view class="page__hd">
-    <view class="page__title">场景管理</view>
+    <view class="page__title">场景</view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">我添加的场景</view>
+    <view class="weui-cells__title">我的场景</view>
     <!-- 使用block循环数据 -->
     <block wx:for="{{servers}}">
     <!-- 使用navigator来进行跳转，类似A标签 -->

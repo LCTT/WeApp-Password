@@ -38,7 +38,7 @@
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
       <navigator url="../linuxcnManual/linuxcnManual" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">在『Linux 中国』网站上使用本验证器</view>
+        <view class="weui-cell__bd">在 linux.cn 网站上使用</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
 
@@ -47,7 +47,7 @@
     <view class="weui-cells__title">关于与致谢</view>
     <view class="weui-cells weui-cells_after-title">
       <navigator url="../about/about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">关于 Linux 中国</view>
+        <view class="weui-cell__bd">关于 Linux 中国（linux.cn）</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
       <navigator url="../thank/thank" class="weui-cell weui-cell_access" hover-class="weui-cell_active">

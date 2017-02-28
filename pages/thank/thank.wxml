@@ -14,10 +14,6 @@
         <view class="weui-article__p">
           https://github.com/google/google-authenticator
         </view>
-        <view class="weui-article__h3">russau totp.js</view>
-        <view class="weui-article__p">
-          http://jsfiddle.net/russau/ch8PK/
-        </view>
       </view>
     </view>
   </view>
