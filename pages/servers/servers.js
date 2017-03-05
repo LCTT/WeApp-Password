@@ -97,8 +97,8 @@ Page({
      * 分享对象的设置。path可以是含参的。
      */
     return {
-      title: '运维密码！帮助你更好的管理你的密码！',
-      desc: 'LinuxCN 出品',
+      title: '运维密码',
+      desc: '每一位运维人员都需要的 OTP 管理工具',
       path: '/pages/servers/servers'
     }
   },

@@ -128,5 +128,15 @@ Page({
     wx.switchTab({
       url: '../servers/servers'
     })
+  },
+   onShareAppMessage: function () {
+    /**
+     * 分享对象的设置。path可以是含参的。
+     */
+    return {
+      title: '运维密码',
+      desc: '每一位运维人员都需要的 OTP 管理工具',
+      path: '/pages/servers/servers'
+    }
   }
 })
