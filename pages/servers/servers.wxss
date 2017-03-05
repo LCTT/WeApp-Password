@@ -19,3 +19,9 @@
 .weui-form-preview::after, .weui-form-preview__hd::after {
     border: 0
 }
+.tips{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30rpx;
+  padding:30px 15px;
+}

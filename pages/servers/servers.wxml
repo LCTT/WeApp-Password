@@ -23,6 +23,14 @@
         </view>
       </navigator>
     </block>
+    <block wx:if="{{servers.length == 0}}">
+    <view style="text-align:center;padding-top:70px;">
+    
+    <image src="https://ypingcn.github.io/assets/imgs/404.png" style="width:150px;height:150px;"></image>
+    <view  class="tips">尚无任何场景，请点击右下角扫描按钮添加</view>
+    
+    </view>
+    </block>
   </view>
 </view>
 <!-- 页面右下角按钮，使用base64解码  -->
