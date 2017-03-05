@@ -1,7 +1,7 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">场景详情</view>
-        <view class="page__desc">查看场景详情</view>
+        <view class="page__title">{{name}}</view>
+        <view class="page__desc">{{username}}</view>
     </view>
     <view class="page__bd">
         <view class="weui-form-preview">
@@ -12,14 +12,7 @@
             </view>
             <progress percent="{{timer}}" stroke-width="4" />
             <view class="weui-form-preview__bd">
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">场景名</view>
-                    <view class="weui-form-preview__value">{{name}}</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">用户名</view>
-                    <view class="weui-form-preview__value">{{username}}</view>
-                </view>
+                
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">场景备注</view>
                     <view class="weui-form-preview__value">{{desc}}</view>
