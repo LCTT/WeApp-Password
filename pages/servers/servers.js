@@ -22,6 +22,7 @@ Page({
   },
   onReady: function () {
     var that = this;
+    
     /**
      * 每秒执行一次
      */
@@ -29,8 +30,12 @@ Page({
       /**
        * 如果当前数据的长度和本地存储中数据长度不同。强制刷新一次数据
        */
-      if (that.data.servers.length != wx.getStorageInfoSync().keys.length) {
-        that.refreshData();
+    
+      var mem_server = wx.getStorageSync('servers');
+      if(mem_server != ''){
+        if(JSON.parse(mem_server).length != that.data.servers.length){
+          that.refreshData();
+        }
       }
       var timestamp = (new Date()).getTime().toString().substr(0, 10);
       var timeHook = timestamp % 30;
@@ -54,8 +59,11 @@ Page({
 
   refreshData: function () {
     var that = this;
-    var servers = wx.getStorageSync('servers');
-    var servers = JSON.parse(servers);
+    var raw_server = wx.getStorageSync('servers');
+    if(raw_server == ''){
+      return ;
+    }
+    var servers = JSON.parse(raw_server);
     /**
      * 判断当前是否有添加好的场景
      */

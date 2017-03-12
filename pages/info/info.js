@@ -1,46 +1,57 @@
 const totp = require('../../utils/totp.js');
 Page({
   data: {
-    timer:0
+    timer: 0
   },
   onLoad: function (options) {
     var that = this;
     /**
-     * 使用getStorage方法来加载数据。如果加载失败则提示无权限，并返回场景列表。后续地点感知功能上线后，调整至感知页面，体验更佳。
+     * 获取数据
      */
-    wx.getStorage({
-      key: options.id,
-      success: function (res) {
+    var servers = wx.getStorageSync('servers');
+    /**
+     * str to obj
+     */
+    servers = JSON.parse(servers);
+    /**
+     * forEach 处理
+     */
+    servers.forEach(function (value, index, key) {
+      /**
+       * 找到目标数据
+       */
+      if (value.secret == options.id) {
+        console.log(value);
         that.setData({
           keys: options.id,
-          name: res.data.name,
-          username: res.data.username,
-          desc: res.data.desc,
-          secret: res.data.secret,
-          code: totp.getCode(res.data.secret),
+          name: value.name,
+          username: value.username,
+          desc: value.desc,
+          secret: value.secret,
+          code: totp.getCode(options.id)
         })
-      },
-      fail: function (e) {
-        
-          wx.showModal({
-            title: "权限不足！",
-            content: "您无权查看当前场景！",
-            success: function (res) {
-              if (res.confirm) {
-                wx.switchTab({
-                  url: '../servers/servers'
-                })
-              } else {
-                wx.switchTab({
-                  url: '../servers/servers'
-                })
-              }
-            }
-          })
-        
-
       }
     })
+    /**
+     *  如果用户名 或 secret拿不到，认为场景无效。返回权限报错问题。
+     */
+    if (that.data.username == '' || that.data.secret == '') {
+      wx.showModal({
+        title: "权限不足！",
+        content: "您无权查看当前场景！",
+        success: function (res) {
+          if (res.confirm) {
+            wx.switchTab({
+              url: '../servers/servers'
+            })
+          } else {
+            wx.switchTab({
+              url: '../servers/servers'
+            })
+          }
+        }
+      })
+    }
   },
   onReady: function () {
     var that = this;
@@ -48,33 +59,37 @@ Page({
      * 进行时间判断，如果时间在30的整除点上，计算一次code，如果不是在时间点上，则只是变更进度条数据
      */
     setInterval(function () {
-       var timestamp = new Date().getTime().toString().substr(0,10);
-       var timeHook = timestamp%30;
-       if( timeHook != 0 ){
-          that.setData({
-            timer:timeHook*3.4
-          })
-       }else{
-         that.setData({
-            timer:0
-          })
+      var timestamp = new Date().getTime().toString().substr(0, 10);
+      var timeHook = timestamp % 30;
+      if (timeHook != 0) {
+        that.setData({
+          timer: timeHook * 3.4
+        })
+      } else {
+        that.setData({
+          timer: 0
+        })
         that.updateCode();
-       }
-      
+      }
+
     }, 1000)
 
   },
   deleteOne: function (e) {
     var that = this;
-    /**
-     * 使用removeStorage方法来删除数据。
-     */
-    wx.removeStorage({
-      key: that.data.keys,
+    var servers = wx.getStorageSync('servers');
+    servers = JSON.parse(servers);
+    var server = [];
+    servers.forEach(function (value, index, array) {
+      if (value.key != that.data.keys) {
+        server.push(value);
+      }
+    });
+    server = JSON.stringify(server);
+    wx.setStorage({
+      key: 'servers',
+      data: server,
       success: function (res) {
-        /**
-         * 提示删除场景成功。并调用switchTab方法回到场景列表页。后续考虑跳转到场景感知页面。
-         */
         wx.showToast({
           title: '删除场景成功',
           icon: 'success',
@@ -85,25 +100,46 @@ Page({
             })
           }
         })
-
-      },
-      fail: function () {
-        /**
-         * 如果无法删除，提示无法删除，并请求联系管理员，协助排除故障。
-         */
-        wx.showModal({
-          title: '删除失败！',
-          content: '当前场景无法删除，请联系管理员！',
-          success: function (res) {
-            if (res.confirm) {
-              wx.switchTab({
-                url: '../servers/servers'
-              })
-            }
-          }
-        })
       }
     })
+    // /**
+    //  * 使用removeStorage方法来删除数据。
+    //  */
+    // wx.removeStorage({
+    //   key: that.data.keys,
+    //   success: function (res) {
+    //     /**
+    //      * 提示删除场景成功。并调用switchTab方法回到场景列表页。后续考虑跳转到场景感知页面。
+    //      */
+    //     wx.showToast({
+    //       title: '删除场景成功',
+    //       icon: 'success',
+    //       duration: 2000,
+    //       success: function () {
+    //         wx.switchTab({
+    //           url: '../servers/servers'
+    //         })
+    //       }
+    //     })
+
+    //   },
+    //   fail: function () {
+    //     /**
+    //      * 如果无法删除，提示无法删除，并请求联系管理员，协助排除故障。
+    //      */
+    //     wx.showModal({
+    //       title: '删除失败！',
+    //       content: '当前场景无法删除，请联系管理员！',
+    //       success: function (res) {
+    //         if (res.confirm) {
+    //           wx.switchTab({
+    //             url: '../servers/servers'
+    //           })
+    //         }
+    //       }
+    //     })
+    //   }
+    // })
   },
   updateCode: function () {
     var that = this;
@@ -129,7 +165,7 @@ Page({
       url: '../servers/servers'
     })
   },
-   onShareAppMessage: function () {
+  onShareAppMessage: function () {
     /**
      * 分享对象的设置。path可以是含参的。
      */
