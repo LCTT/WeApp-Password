@@ -1,21 +1,22 @@
 {
     "pages": [
+        "pages/options/options",
         "pages/servers/servers",
         "pages/ingress/ingress",
         "pages/index/index",
         "pages/debug/debug",
         "pages/info/info",
         "pages/qrcode/qrcode",
-        "pages/options/options",
+        
         "pages/add/add",
         "pages/addSucc/addSucc",
         "pages/about/about",
         "pages/manual/manual",
         "pages/thank/thank",
         "pages/linuxcnManual/linuxcnManual",
-        "pages/import/import",
         "pages/backup/backup",
-        "pages/backupImg/backupImg"
+        "pages/backupImg/backupImg",
+        "pages/import/import"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -34,7 +35,6 @@
         "borderStyle": "black",
         "backgroundColor": "#fff",
         "list": [
-           
             {
                 "pagePath": "pages/servers/servers",
                 "text": "场景",

@@ -1,6 +1,7 @@
 <view class="container-box">
     <view class="img-box">
         <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+        <text>点击图片保存到本地！</text>
     </view>
     
     <form bindsubmit="formSubmit">
