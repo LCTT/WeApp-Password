@@ -1,4 +1,5 @@
 const totp = require('../../utils/totp.js');
+var update = require("../../utils/update");
 Page({
   data: {
     servers: [],
@@ -8,7 +9,7 @@ Page({
    * 页面进入时，首先加载一次数据
    */
   onLoad: function (options) {
-
+    update.checkUpdate();
     var ingress = wx.getStorageSync('ingress');
     /**
      * 如果Ingress 为空，则跳转到引导页
@@ -22,7 +23,7 @@ Page({
   },
   onReady: function () {
     var that = this;
-    
+
     /**
      * 每秒执行一次
      */
@@ -30,10 +31,10 @@ Page({
       /**
        * 如果当前数据的长度和本地存储中数据长度不同。强制刷新一次数据
        */
-    
+
       var mem_server = wx.getStorageSync('servers');
-      if(mem_server != ''){
-        if(JSON.parse(mem_server).length != that.data.servers.length){
+      if (mem_server != '') {
+        if (JSON.parse(mem_server).length != that.data.servers.length) {
           that.refreshData();
         }
       }
@@ -60,8 +61,8 @@ Page({
   refreshData: function () {
     var that = this;
     var raw_server = wx.getStorageSync('servers');
-    if(raw_server == ''){
-      return ;
+    if (raw_server == '') {
+      return;
     }
     var servers = JSON.parse(raw_server);
     /**

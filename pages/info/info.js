@@ -1,10 +1,12 @@
 const totp = require('../../utils/totp.js');
+var update = require("../../utils/update");
 Page({
   data: {
     timer: 0
   },
   onLoad: function (options) {
     var that = this;
+    update.checkUpdate();
     /**
      * 获取数据
      */
