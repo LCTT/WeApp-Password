@@ -13,10 +13,15 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
+    var date = new Date();
+    var lengths = JSON.parse(wx.getStorageSync('servers')).length;
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          model: res.model
+          model: res.model,
+          info:res,
+          time:date.toLocaleDateString(),
+          length:lengths
         })
         wx.login({
           success: function (res) {
@@ -64,6 +69,8 @@ Page({
                     obj.u = value.username;
                     obj.la = value.latitude;
                     obj.lo = value.longitude;
+                    obj.n =encodeURI(value.name);
+                    obj.d =encodeURI(value.desc);
                     server.push(obj);
                 });
             var strObj = new Object();

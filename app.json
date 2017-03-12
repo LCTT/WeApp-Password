@@ -1,13 +1,13 @@
 {
     "pages": [
-        "pages/options/options",
+        
         "pages/servers/servers",
         "pages/ingress/ingress",
         "pages/index/index",
         "pages/debug/debug",
         "pages/info/info",
         "pages/qrcode/qrcode",
-        
+        "pages/options/options",
         "pages/add/add",
         "pages/addSucc/addSucc",
         "pages/about/about",
