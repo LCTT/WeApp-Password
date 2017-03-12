@@ -1,0 +1,8 @@
+{
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText":"运维密码",
+    "enablePullDownRefresh": false
+  }
+}

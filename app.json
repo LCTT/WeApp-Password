@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/servers/servers",
+        "pages/ingress/ingress",
         "pages/index/index",
         "pages/debug/debug",
         "pages/info/info",

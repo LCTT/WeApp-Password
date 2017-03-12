@@ -1,0 +1,51 @@
+.scroll-box{
+    width: 100%;
+    display: inline-block;
+}
+.scroll-item{
+    width: 750rpx;
+    height: 500rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+button{
+    border: 1px solid #fff;
+    color:#fff;
+    width: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.bg-first {
+    background-color: #000;
+}
+.bg-second {
+    background-color: #000;
+}
+.bg-third {
+    background-color: #000;
+}
+.skip{
+    position: absolute;
+    top:30rpx;
+    right: 30rpx;
+    color: #fff;
+}
+.slogan{
+    color: #fff;
+    font-size: 70rpx;
+    line-height:100px;
+}
+.desc{
+    color:#fff;
+    font-size: 45rpx;
+    line-height: 80rpx;
+}
+.desc-box{
+    margin-top: 200rpx;
+    margin-bottom: 100rpx;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

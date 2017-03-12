@@ -8,6 +8,16 @@ Page({
    * 页面进入时，首先加载一次数据
    */
   onLoad: function (options) {
+    
+    var ingress = wx.getStorageSync('ingress');
+    /**
+     * 如果Ingress 为空，则跳转到引导页
+     */
+    if(ingress == ''){
+      wx.redirectTo({
+        url: '../ingress/ingress'
+      })
+    }
     this.refreshData();
   },
   onReady: function () {
