@@ -1,4 +1,4 @@
-// pages/import/import.js
+var helper = require("../../utils/helper");
 Page({
   data: {},
   onLoad: function (options) {
@@ -23,7 +23,7 @@ Page({
           if (old_length == 0) {
             old_servers.push({ "secret": value.s, "name": decodeURI(value.b), "username": decodeURI(value.b), "desc": decodeURI(value.b), "latitude": value.la, "longitude": value.lo, "signedBy": decodeURI(value.b), "key": value.s })
           } else {
-            var is_exist = that.inArray(value.s, old_servers)
+            var is_exist = helper.inArray(value.s, old_servers)
             if (is_exist == false) {
               old_servers.push({ "secret": value.s, "name": decodeURI(value.b), "username": decodeURI(value.b), "desc": decodeURI(value.b), "latitude": value.la, "longitude": value.lo, "signedBy": decodeURI(value.b), "key": value.s })
             }else{
@@ -65,24 +65,5 @@ Page({
       },
 
     })
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
-  },
-  inArray: function (needle, haystack) {
-    /**
-     * inArray 源自 Jquey
-     */
-    var length = haystack.length;
-    for (var i = 0; i < length; i++) {
-      if (haystack[i].secret == needle) return true;
-    }
-    return false;
   }
 })
