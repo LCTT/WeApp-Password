@@ -1,4 +1,4 @@
-
+var helper = require("../../utils/helper");
 Page({
   data: {},
   /*
@@ -15,18 +15,15 @@ Page({
       if (value.secret == options.secret) {
         wx.showModal({
           title: '该场景已经添加过！',
-          content: '当前场景已经添加过！点击确认,将会新增一个重复场景！',
+          content: '当前场景已经添加过！请返回重新扫描！',
+          showCancel:false,
           success: function (res) {
-            if (res.confirm) {
-
-            } else {
               /*
               * 使用switchTab方法切换到场景管理页面
               */
               wx.switchTab({
                 url: '../servers/servers'
               })
-            }
           }
         })
       }
