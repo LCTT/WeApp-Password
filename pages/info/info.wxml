@@ -14,8 +14,7 @@
             <view class="weui-form-preview__bd">
                 
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">场景备注</view>
-                    <view class="weui-form-preview__value">{{desc}}</view>
+                    <view class="weui-form-preview__value">　　{{desc}}</view>
                 </view>
             </view>
             <view class="weui-form-preview__ft">

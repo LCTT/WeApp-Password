@@ -15,7 +15,7 @@
             </view>
             <view class="weui-form-preview__bd">
               <view class="weui-form-preview__item">
-                {{item.name}}({{item.username}})
+                {{item.name}} （{{item.username}}）
               </view>
             </view>
           </view>

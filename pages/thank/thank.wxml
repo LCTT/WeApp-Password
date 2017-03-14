@@ -1,7 +1,7 @@
 <view class="page">
   <view class="page__hd">
     <view class="page__title">致谢</view>
-    <view class="page__desc">本产品中参考了如下 RFC 和软件：</view>
+    <view class="page__desc">本软件中参考了如下 RFC 和软件：</view>
   </view>
   <view class="page__bd">
     <view class="weui-article">
