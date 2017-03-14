@@ -23,14 +23,14 @@ Page({
        * 找到目标数据
        */
       if (value.secret == options.id) {
-        console.log(value);
         that.setData({
           keys: options.id,
           name: value.name,
           username: value.username,
           desc: value.desc,
           secret: value.secret,
-          code: totp.getCode(options.id)
+          code: totp.getCode(options.id),
+          signedBy:value.signedBy
         })
       }
     })
@@ -79,69 +79,43 @@ Page({
   },
   deleteOne: function (e) {
     var that = this;
-    var servers = wx.getStorageSync('servers');
-    servers = JSON.parse(servers);
-    var server = [];
-    servers.forEach(function (value, index, array) {
-      if (value.key != that.data.keys) {
-        server.push(value);
-      }
-    });
-    server = JSON.stringify(server);
-    wx.setStorage({
-      key: 'servers',
-      data: server,
+    wx.showModal({
+      title: "注意！",
+      content: "你是否要删除由"+that.data.signedBy+"颁发的，用户名为"+that.data.username+"的密码",
       success: function (res) {
-        wx.showToast({
-          title: '删除场景成功',
-          icon: 'success',
-          duration: 2000,
-          success: function () {
-            wx.switchTab({
-              url: '../servers/servers'
-            })
-          }
-        })
+        if (res.confirm) {
+
+          var servers = wx.getStorageSync('servers');
+          servers = JSON.parse(servers);
+          var server = [];
+          servers.forEach(function (value, index, array) {
+            if (value.key != that.data.keys) {
+              server.push(value);
+            }
+          });
+          server = JSON.stringify(server);
+          wx.setStorage({
+            key: 'servers',
+            data: server,
+            success: function (res) {
+              wx.showToast({
+                title: '删除场景成功',
+                icon: 'success',
+                duration: 2000,
+                success: function () {
+                  wx.switchTab({
+                    url: '../servers/servers'
+                  })
+                }
+              })
+            }
+          })
+        } else {
+
+        }
       }
     })
-    // /**
-    //  * 使用removeStorage方法来删除数据。
-    //  */
-    // wx.removeStorage({
-    //   key: that.data.keys,
-    //   success: function (res) {
-    //     /**
-    //      * 提示删除场景成功。并调用switchTab方法回到场景列表页。后续考虑跳转到场景感知页面。
-    //      */
-    //     wx.showToast({
-    //       title: '删除场景成功',
-    //       icon: 'success',
-    //       duration: 2000,
-    //       success: function () {
-    //         wx.switchTab({
-    //           url: '../servers/servers'
-    //         })
-    //       }
-    //     })
 
-    //   },
-    //   fail: function () {
-    //     /**
-    //      * 如果无法删除，提示无法删除，并请求联系管理员，协助排除故障。
-    //      */
-    //     wx.showModal({
-    //       title: '删除失败！',
-    //       content: '当前场景无法删除，请联系管理员！',
-    //       success: function (res) {
-    //         if (res.confirm) {
-    //           wx.switchTab({
-    //             url: '../servers/servers'
-    //           })
-    //         }
-    //       }
-    //     })
-    //   }
-    // })
   },
   updateCode: function () {
     var that = this;
