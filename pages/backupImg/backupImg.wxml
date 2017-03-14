@@ -9,7 +9,7 @@
     </view>
     
     <form bindsubmit="formSubmit">
-        <button formType="submit" class="mybtn" type="primary">完成</button>
+        <button formType="submit" class="mybtn" type="primary">截屏保存后返回</button>
     </form>
 </view>
 <view hidden="{{maskHidden}}" class="mask"></view>
