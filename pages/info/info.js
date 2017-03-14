@@ -81,7 +81,7 @@ Page({
     var that = this;
     wx.showModal({
       title: "注意！",
-      content: "你是否要删除由"+that.data.signedBy+"颁发的，用户名为"+that.data.username+"的密码",
+      content: "你是否要删除由“"+that.data.signedBy+"”颁发的，用户名为 "+that.data.username+" 的密码吗？此操作不可恢复。",
       success: function (res) {
         if (res.confirm) {
 

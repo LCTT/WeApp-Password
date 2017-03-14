@@ -3,9 +3,9 @@
     <!-- 直接使用渲染到视图中的ID加载图片  -->
     <image src="https://linux.cn/weixin/api/otp.php?qrcode&id={{id}}" catchtap="alertInfo" catchlongtap="previewImg"></image>
     <view class="info-box">
-    <text class="text">场景：{{name}}</text>
-    <text class="text">账号：{{username}}</text>
-    <text class="remark">备注:{{desc}}</text>
+       <text style="display:block;margin-left:100rpx;text-align:left;">场景：{{name}}</text>
+        <text style="display:block;margin-left:100rpx;text-align:left;">账号：{{username}}</text>
+        <text style="display:block;margin-left:100rpx;text-align:left;">　　{{desc}}</text>
     </view>
   </view>
   <form bindsubmit="formSubmit">
