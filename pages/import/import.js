@@ -8,6 +8,12 @@ Page({
     var that = this;
     wx.scanCode({
       success: function (res) {
+        wx.showToast({
+          title: '恢复中',
+          icon: 'success',
+          duration: 10000
+        })
+        var ignore_numbers = 0;
         var data = JSON.parse(res.result);
         var server = data.s;
         var raw_data = wx.getStorageSync('servers');
@@ -20,6 +26,8 @@ Page({
             var is_exist = that.inArray(value.s, old_servers)
             if (is_exist == false) {
               old_servers.push({ "secret": value.s, "name": decodeURI(value.b), "username": decodeURI(value.b), "desc": decodeURI(value.b), "latitude": value.la, "longitude": value.lo, "signedBy": decodeURI(value.b), "key": value.s })
+            }else{
+              ignore_numbers ++;
             }
           }
 
@@ -28,15 +36,17 @@ Page({
           key: 'servers',
           data: JSON.stringify(old_servers),
           success: function (res) {
-            wx.showToast({
-              "title": "成功",
-              "icon": "success",
-              success: function () {
-                setTimeout(function () {
+            wx.hideToast();
+            wx.showModal({
+              title:"恭喜！场景恢复成功！",
+              content:"您的场景已经恢复成功，共"+server.length+"个场景，跳过"+ignore_numbers+"个重复场景。",
+              showCancel:false,
+              success:function(res){
+                
                   wx.switchTab({
-                    url: '../options/options'
-                  }, 2000);
-                })
+                    url: '../servers/servers'
+                  })
+                
               }
             })
           },
