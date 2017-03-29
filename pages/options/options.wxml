@@ -44,14 +44,14 @@
 
     </view>
     
-    <view class="weui-cells__title">关于与致谢</view>
+    <view class="weui-cells__title">关于</view>
     <view class="weui-cells weui-cells_after-title">
       <navigator url="../about/about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">关于 Linux 中国（linux.cn）</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
       <navigator url="../thank/thank" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">致谢</view>
+        <view class="weui-cell__bd">关于运维密码</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
     </view>
