@@ -70,4 +70,3 @@
     -->
   </view>
 </view>
-<contact-button type="default-light" size="27" session-from="options"></contact-button>
