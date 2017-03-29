@@ -123,11 +123,14 @@ Page({
             duration: 2000,
             success: function () {
               var username = res.result.split("/")[3].split("?")[0].split(":")[1];
-              if ( username == null){
+              var regexIssuer = res.result.split("/")[3].split("?")[0].split(":")[0];
+              var issuer  = res.result.split("issuer=")[1];
+              
+              if ( username == null || issuer != regexIssuer){
                   username = res.result.split("/")[3].split("?")[0];
               }
               wx.navigateTo({
-                url: '../add/add?secret=' + res.result.split("?")[1].split("&")[0].split("=")[1] + "&name=" + res.result.split("issuer=")[1] + "&username=" + username,
+                url: '../add/add?secret=' + res.result.split("?")[1].split("&")[0].split("=")[1] + "&name=" + issuer + "&username=" + username,
               })
             }
           })
@@ -165,6 +168,7 @@ Page({
 
             }
           })
+          console.log(res);
         }
       }
     })
