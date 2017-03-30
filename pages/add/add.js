@@ -38,9 +38,9 @@ Page({
         * 获取到GPS信息后，连带传入的options参数中的值都同步到视图中，用于页面展示和后续数据存储时使用。
         */
         that.setData({
-          name: decodeURI(options.name),
+          name: options.name,
           secret: options.secret,
-          username: decodeURI(options.username),
+          username: options.username,
           latitude: res.latitude,
           longitude: res.longitude
         });
