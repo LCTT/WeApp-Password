@@ -11,13 +11,5 @@
                 <button class="weui-btn" type="primary" catchtap="returnIndex">查看场景密码</button>
             </view>
         </view>
-        <view class="weui-msg__extra-area">
-            <view class="weui-footer">
-                <view class="weui-footer__links">
-                    <navigator url="" class="weui-footer__link">Linux中国</navigator>
-                </view>
-                <view class="weui-footer__text">Copyright © 2008-2017 Linux中国</view>
-            </view>
-        </view>
     </view>
 </view>
