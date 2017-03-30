@@ -122,15 +122,16 @@ Page({
             icon: 'success',
             duration: 2000,
             success: function () {
-              var username = res.result.split("/")[3].split("?")[0].split(":")[1];
-              var regexIssuer = res.result.split("/")[3].split("?")[0].split(":")[0];
-              var issuer  = res.result.split("issuer=")[1];
+              result = decodeURIComponent(res.result);
+              var username = result.split("/")[3].split("?")[0].split(":")[1];
+              var regexIssuer = result.split("/")[3].split("?")[0].split(":")[0];
+              var issuer  = result.split("issuer=")[1];
               
               if ( username == null || issuer != regexIssuer){
-                  username = res.result.split("/")[3].split("?")[0];
+                  username = result.split("/")[3].split("?")[0];
               }
               wx.navigateTo({
-                url: '../add/add?secret=' + res.result.split("?")[1].split("&")[0].split("=")[1] + "&name=" + issuer + "&username=" + username,
+                url: '../add/add?secret=' + result.split("?")[1].split("&")[0].split("=")[1] + "&name=" + issuer + "&username=" + username,
               })
             }
           })
