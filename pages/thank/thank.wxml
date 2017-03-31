@@ -9,7 +9,7 @@
       <view class="weui-article__section">
         <view class="weui-article__h3">软件版本</view>
         <view class="weui-article__p">
-         v 1.0.0
+         v 0.6.3
         </view>
         <view class="weui-article__h3">数据版本</view>
         <view class="weui-article__p">
@@ -22,7 +22,7 @@
         <view class="weui-article__p">
          @Bestony
         </view>
-        <view class="weui-article__h3">设计师</view>
+        <view class="weui-article__h3">UI 设计师</view>
         <view class="weui-article__p">
          @一一
         </view>
