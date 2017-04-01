@@ -1,7 +1,8 @@
 {
     "pages": [
         "page/index/index",
-        "page/options/options"
+        "page/options/options",
+        "page/view/view"
     ],
     "tabBar": {
         "color": "#8a8a8a",
