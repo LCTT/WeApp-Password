@@ -1,0 +1,20 @@
+<!--
+  key: string
+  code: string
+  name: string,
+  username: string
+-->
+<template name="cardItem">
+ <!-- Card -->
+  <view class="card mainRed" data-key="{{key}}" catchtap="viewInfo">
+    <view class="cardInfo">
+      <text class="cardDesc">{{username}}</text>
+      <text class="cardDesc">{{name}}</text>
+    </view>
+    <view class="cardContent">
+      <image src="https://postimg.aliavv.com/markdown/2017-04-01-{{typed}}.png" class="cardImage"></image>
+      <text class="cardCode" catchtap="copyCode" data-code="{{code}}">{{code}}</text>
+    </view>
+  </view>
+  <!-- Card End -->
+</template>
