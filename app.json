@@ -1,0 +1,27 @@
+{
+    "pages": [
+        "page/index/index",
+        "page/options/options"
+    ],
+    "tabBar": {
+        "color": "#8a8a8a",
+        "selectedColor": "#373739",
+        "backgroundColor":"#ffffff",
+        "borderStyle":"white",
+        "list": [
+            {
+                "pagePath": "page/index/index",
+                "text": "场景",
+                "iconPath": "images/index.png",
+                "selectedIconPath": "images/index_hl.png"
+            },
+            {
+                "pagePath": "page/options/options",
+                "text": "设置",
+                "iconPath": "images/option.png",
+                "selectedIconPath": "images/option_hl.png"
+            }
+        ]
+    },
+    "debug":true
+}

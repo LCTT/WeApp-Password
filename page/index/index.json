@@ -1,0 +1,8 @@
+{
+    "navigationBarBackgroundColor": "#3B3A41",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "运维密码",
+    "backgroundColor": "#8a8a8a",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+}
