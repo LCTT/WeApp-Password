@@ -1,2 +1,9 @@
-<!--page/index/index.wxml-->
-<text>page/index/index.wxml</text>
+<import src="../../util/template/card.wxml" />
+<view class="flexBox">
+  <block wx:for="{{server}}">
+    <template is="cardItem" data="{{...item}}"></template>
+  </block>
+  <view class="addCard" catchtap="addServer">
+    <text class="addText">添加场景</text>
+  </view>
+</view>
