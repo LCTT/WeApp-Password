@@ -1,3 +1,4 @@
+
 <!--
   key: string
   code: string
@@ -5,7 +6,8 @@
   username: string
 -->
 <template name="cardItem">
- <!-- Card -->
+
+  <!-- Card -->
   <view class="card mainRed" data-key="{{key}}" catchtap="viewInfo">
     <view class="cardInfo">
       <text class="cardDesc">{{username}}</text>
@@ -16,19 +18,27 @@
       <text class="cardCode" catchtap="copyCode" data-code="{{code}}">{{code}}</text>
     </view>
   </view>
+
   <!-- Card End -->
 </template>
-
 <template name="optionCard">
- <!-- Card -->
- <navigator url="{{url}}">
-  <view class="optionCard {{color}}">
-    <view class="optionInfo"><text class="optionDesc">{{desc}}</text></view>
-    <view class="optionContent">
-     <text class="iconfont icon-{{typed}}" style="font-size:80rpx; opacity: 0.8;margin-top:10rpx;margin-left:20rpx;"></text>
-      <text class="optionName">{{name}}</text>
+
+  <!-- Card -->
+  <navigator url="{{url}}">
+    <view class="optionCard {{color}}">
+      <view class="optionIcon">
+        <text class="iconfont icon-{{typed}}" style="font-size:150rpx;line-height:150rpx; opacity: 0.8;margin-left:10rpx;"></text>
+      </view>
+      <view class="optionText">
+        <view class="optionInfo">
+          <text class="optionDesc">{{desc}}</text>
+        </view>
+        <view class="optionContent">
+          <text class="optionName">{{name}}</text>
+        </view>
+      </view>
     </view>
-  </view>
   </navigator>
+
   <!-- Card End -->
 </template>

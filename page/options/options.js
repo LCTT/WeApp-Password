@@ -7,28 +7,28 @@ Page({
         "name":"数据备份",
         "desc":"备份/恢复",
         "color":"mainRed",
-        "typed" :"website"
+        "typed" :"restore"
       },
       {
         "url":"/page/view/view",
         "name":"云服务",
         "desc":"同步云端",
         "color":"mainBlue",
-         "typed" :"website"
+         "typed" :"cloud"
       },
       {
         "url":"/page/view/view",
         "name":"使用指南",
         "desc":"教你玩转运维密码",
         "color":"mainGreen",
-         "typed" :"website"
+         "typed" :"book"
       },
       {
         "url":"/page/view/view",
         "name":"关于我们",
         "desc":"运维密码和我们",
         "color":"mainYellow",
-         "typed" :"website"
+         "typed" :"about"
       }
     ]
   },
