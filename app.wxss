@@ -1,3 +1,4 @@
+@import 'util/style/iconfont.wxss';
 /*
  * 色彩定义
  */
@@ -55,12 +56,6 @@ page {
   margin: 10rpx 20rpx;
 }
 
-.cardImage {
-  width: 150rpx;
-  height: 150rpx;
-  opacity: 0.5;
-}
-
 .cardInfo {
   display: flex;
   flex-direction: row;
@@ -102,12 +97,7 @@ page {
   align-items: flex-end;
   padding-bottom: 30rpx;
 }
-.optionImage {
-  width: 80rpx;
-  height: 80rpx;
-  opacity: 0.5;
-  padding-left: 30rpx;
-}
+
 .optionName{
   font-size: 70rpx;
 }

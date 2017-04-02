@@ -6,7 +6,21 @@ Page({
         username: "bestony@linux.cn",
         name: "Linux 中国",
         code: "123 456",
-        typed: "website",
+        typed: "server",
+        key: "ABCSXS"
+      },
+      {
+        username: "bestony@linux.cn",
+        name: "Linux 中国",
+        code: "456 789",
+        typed: "app",
+        key: "ABCSXS"
+      },
+      {
+        username: "bestony@linux.cn",
+        name: "Linux 中国",
+        code: "456 789",
+        typed: "game",
         key: "ABCSXS"
       },
       {
@@ -14,6 +28,14 @@ Page({
         name: "Linux 中国",
         code: "456 789",
         typed: "website",
+        key: "ABCSXS"
+      },
+    
+      {
+        username: "bestony@linux.cn",
+        name: "Linux 中国",
+        code: "456 789",
+        typed: "linux",
         key: "ABCSXS"
       }
     ]

@@ -12,7 +12,7 @@
       <text class="cardDesc">{{name}}</text>
     </view>
     <view class="cardContent">
-      <image src="https://postimg.aliavv.com/markdown/2017-04-01-{{typed}}.png" class="cardImage"></image>
+      <text class="iconfont icon-{{typed}}" style="font-size:120rpx; opacity: 0.8;margin-top:20rpx;"></text>
       <text class="cardCode" catchtap="copyCode" data-code="{{code}}">{{code}}</text>
     </view>
   </view>
@@ -25,7 +25,7 @@
   <view class="optionCard {{color}}">
     <view class="optionInfo"><text class="optionDesc">{{desc}}</text></view>
     <view class="optionContent">
-      <image src="https://postimg.aliavv.com/markdown/2017-04-01-{{type}}.png" class="optionImage"></image>
+     <text class="iconfont icon-{{typed}}" style="font-size:80rpx; opacity: 0.8;margin-top:10rpx;margin-left:20rpx;"></text>
       <text class="optionName">{{name}}</text>
     </view>
   </view>
