@@ -18,3 +18,17 @@
   </view>
   <!-- Card End -->
 </template>
+
+<template name="optionCard">
+ <!-- Card -->
+ <navigator url="{{url}}">
+  <view class="optionCard {{color}}">
+    <view class="optionInfo"><text class="optionDesc">{{desc}}</text></view>
+    <view class="optionContent">
+      <image src="https://postimg.aliavv.com/markdown/2017-04-01-{{type}}.png" class="optionImage"></image>
+      <text class="optionName">{{name}}</text>
+    </view>
+  </view>
+  </navigator>
+  <!-- Card End -->
+</template>
