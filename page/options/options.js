@@ -1,6 +1,7 @@
 // page/options/options.js
 Page({
   data:{
+    // 定义页面的跳转
     config:[
       {
         "url":"/page/view/view",
@@ -17,14 +18,14 @@ Page({
          "typed" :"cloud"
       },
       {
-        "url":"/page/view/view",
+        "url":"/page/book/book",
         "name":"使用指南",
         "desc":"教你玩转运维密码",
         "color":"mainGreen",
          "typed" :"book"
       },
       {
-        "url":"/page/view/view",
+        "url":"/page/about/about",
         "name":"关于我们",
         "desc":"运维密码和我们",
         "color":"mainYellow",
