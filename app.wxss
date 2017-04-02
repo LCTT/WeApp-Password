@@ -79,3 +79,44 @@ page {
 .cardCode{
     font-size: 100rpx;
 }
+/* 全局选项 */
+.optionCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin: 10rpx 20rpx;
+}
+.optionInfo{
+  text-align: right;
+}
+.optionDesc{
+  font-size: 35rpx;
+  opacity: 0.5;
+}
+.optionContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 30rpx;
+}
+.optionImage {
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0.5;
+  padding-left: 30rpx;
+}
+.optionName{
+  font-size: 70rpx;
+}
+
+/* 工具类 */
+.copyright{
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  opacity: 0.8;
+  margin: 30rpx;
+}
