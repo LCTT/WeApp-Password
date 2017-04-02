@@ -1,0 +1,63 @@
+.viewImageBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.viewImage {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.viewUsername {
+  font-size: 30rpx;
+  line-height: 20rpx;
+  margin-bottom: 0rpx;
+}
+
+.viewCode {
+  font-size: 90rpx;
+  line-height: 40rpx;
+  margin-bottom: 0rpx;
+}
+
+.descBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10rpx;
+  margin: 50rpx 40rpx;
+  margin-top: 80rpx;
+  background-color: #fff;
+}
+
+.descTitle {
+  background-color: #f4f4f4;
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+  line-height: 40rpx;
+}
+
+.descTitleText {
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  color: #BCBCBC;
+}
+
+.descContent {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.descMap{
+    width: 100%;
+    height: 500rpx;
+    border-radius: 10rpx;
+}

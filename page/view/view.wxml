@@ -1,2 +1,24 @@
-<!--page/view/view.wxml-->
-<text>Powered By Linux中国</text>
+<view class="flexBox">
+  <view class="viewImageBox">
+    <image class="viewImage" src="https://postimg.aliavv.com/markdown/wt2sn.png"></image>
+  </view>
+  <view class="infoBox">
+    <text class="viewUsername">
+      bestony@linux.cn
+
+    </text>
+    <text class="viewCode">
+      123 456
+    </text>
+  </view>
+  <view class="descBox">
+    <view class="descTitle">
+      <text class="descTitleText">详情</text>
+    </view>
+    <view class="descContent">
+       这个是描述
+    </view>
+    <map id="map" longitude="113.324520" latitude="23.099994" scale="14" class="descMap"></map>
+  </view>
+  <text class="copyright">Powered By Linux中国</text>
+</view>
