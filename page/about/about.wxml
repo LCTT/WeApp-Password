@@ -1,0 +1,23 @@
+<view class="flexBox">
+  <view class="card mainBlue">
+    <view class="mainContent">
+      <image src="https://postimg.aliavv.com/markdown/2017-04-02-linuxcn_logo_r_512.fw.png" class="logo"></image>
+      <text class="nameText">运维密码</text>
+      <text class="descText">运维密码，你的好帮手</text>
+      <text class="versionText">软件版本 1.0.0 数据版本2.0</text>
+    </view>
+  </view>
+  <view class="card mainBlue">
+    <view class="mainContent">
+      <text class="titleText">主创团队</text>
+      <text class="subTitleText">设计师：@一一</text>
+      <text class="subTitleText">产品经理：@老王</text>
+      <text class="subTitleText">开发者：@Bestony</text>
+      <text class="titleText">参考文献</text>
+      <text class="subTitleText">TOTP RFC Draft</text>
+      <text class="contentText"> http://tools.ietf.org/id/draft-mraihi-totp-timebased-06.html</text>
+      <text class="subTitleText">Google Authenticator</text>
+      <text class="contentText"> https://github.com/google/google-authenticator</text>
+    </view>
+  </view>
+</view>

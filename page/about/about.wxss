@@ -1,0 +1,38 @@
+.logo{
+    width:200rpx;
+    height: 200rpx;
+}
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nameText{
+    font-size: 50rpx;
+    line-height: 70rpx;
+}
+.descText{
+    font-size: 35rpx;
+    line-height: 40rpx;
+}
+.versionText{
+    font-size: 35rpx;
+    line-height: 50rpx;
+    opacity:0.6;
+}
+.titleText{
+    font-size: 40rpx;
+    line-height: 50rpx;
+    margin: 20rpx 0rpx;
+}
+.subTitleText{
+    font-size: 35rpx;
+    line-height: 40rpx;
+    margin: 5rpx;
+}
+.contentText{
+    font-size: 20rpx;
+    line-height: 20rpx;
+    margin: 3rpx;
+}
