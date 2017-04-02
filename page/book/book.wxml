@@ -1,0 +1,8 @@
+<view class="flexBox">
+    <block wx:for="{{book}}">
+
+    <view class="card {{item.color}}">
+        <text>{{item.title}}</text>
+    </view>
+    </block>
+</view>
