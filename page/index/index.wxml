@@ -1,6 +1,6 @@
 <import src="../../util/template/card.wxml" />
 <view class="flexBox">
-  <block wx:for="{{server}}" wx:key="item">
+  <block wx:for="{{servers}}" wx:key="item">
     <template is="cardItem" data="{{...item}}"></template>
   </block>
   <view class="addCard" catchtap="addServer">
