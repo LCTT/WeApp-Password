@@ -1,0 +1,11 @@
+@import '../../util/style/post.wxss';
+.btn-block{
+    width:95%;
+}
+.radio-group{
+    display: flex;
+    flex-direction: column;
+}
+.radio-group radio{
+    margin: 10rpx 0rpx;
+}

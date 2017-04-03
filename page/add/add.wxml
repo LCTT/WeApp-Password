@@ -1,0 +1,23 @@
+<view class="flexBox">
+  <view class="card mainBlue">
+    <text class="p">密钥签发者</text>
+    <text class="h1">Linux中国</text>
+  </view>
+  <form name="form" catchsubmit="submitData">
+    <view class="card mainWhite">
+      <text class="h1">账号</text>
+      <input value="{{username}}" placeholder="这里填写你的用户名" name="username" auto-focus/>
+      <text class="h1">场景名</text>
+      <input value="{{name}}" placeholder="这里填写你的场景名" name="name"/>
+      <text class="h1">备注</text>
+      <textarea auto-height placeholder="在这里填写备注信息" name="desc" />
+      <text class="h1">类型</text>
+      <radio-group class="radio-group" name="type" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <button  class="btn-block" type="primary" form-type="submit">确定</button>
+  </form>
+</view>
