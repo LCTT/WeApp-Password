@@ -9,10 +9,12 @@ Page({
     ]
   },
   onLoad: function (options) {
-    console.log(options);
     var that = this;
     /* 从存储中取出所有的server  */
     var serverStr = wx.getStorageSync('servers');
+    if (serverStr == ''){
+      serverStr = "[]";
+    }
     var servers = JSON.parse(serverStr);
     servers.forEach(function (value, index, array) {
       if (value.secret == options.secret) {
@@ -74,13 +76,13 @@ Page({
   onUnload: function () {
     // 页面关闭
   },
+  radioChange:function(){},
   submitData: function (e) {
     var that = this;
     var old_data = wx.getStorageSync('servers');
     if (old_data == '') {
       old_data = '[]'
     }
-    console.log(e.detail.value)
     var servers = JSON.parse(old_data);
     var old_length = servers.length;
     servers.push({
@@ -91,7 +93,7 @@ Page({
       latitude: that.data.latitude, //此处为页面的data
       longitude: that.data.longitude,
       signedBy: that.data.name,
-      key: that.data.secret,
+      "type":e.detail.value.type
     })
     var new_length = servers.length;
     if (new_length == old_length) {
