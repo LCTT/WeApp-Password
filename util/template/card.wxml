@@ -8,7 +8,7 @@
 <template name="cardItem">
 
   <!-- Card -->
-  <view class="card mainRed" data-key="{{key}}" catchtap="viewInfo">
+  <view class="card mainRed" data-key="{{secret}}" catchtap="viewInfo">
     <view class="cardInfo">
       <text class="cardDesc">{{username}}</text>
       <text class="cardDesc">{{name}}</text>
