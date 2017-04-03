@@ -1,9 +1,10 @@
 <view class="flexBox">
-    <block wx:for="{{book}}">
-
-    <view class="card {{item.color}}">
+  <block wx:for="{{book}}">
+    <navigator url="{{item.url}}">
+      <view class="card {{item.color}}">
         <text>{{item.title}}</text>
-    </view>
-    </block>
-    <text class="copyright">Powered by Linux中国</text>
+      </view>
+    </navigator>
+  </block>
+  <text class="copyright">Powered by Linux中国</text>
 </view>
