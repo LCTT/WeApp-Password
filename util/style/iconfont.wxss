@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 268965 */
-  src: url('//at.alicdn.com/t/font_yowadrmy3545cdi.eot');
-  src: url('//at.alicdn.com/t/font_yowadrmy3545cdi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_yowadrmy3545cdi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_yowadrmy3545cdi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_yowadrmy3545cdi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_dhwc4k55ms57mn29.eot');
+  src: url('//at.alicdn.com/t/font_dhwc4k55ms57mn29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_dhwc4k55ms57mn29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_dhwc4k55ms57mn29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_dhwc4k55ms57mn29.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -41,3 +41,5 @@
 .icon-app:before { content: "\e604"; }
 
 .icon-about:before { content: "\e6b4"; }
+
+.icon-other:before { content: "\e875"; }
