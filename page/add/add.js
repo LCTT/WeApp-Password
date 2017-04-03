@@ -117,7 +117,7 @@ Page({
         "icon": "success",
         complete: function (e) {
           wx.redirectTo({
-            url: '../view/view?secret=' + that.data.secret
+            url: '../view/view?id=' + that.data.secret
           })
         }
       })
