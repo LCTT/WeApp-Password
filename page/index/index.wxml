@@ -1,4 +1,5 @@
 <import src="../../util/template/card.wxml" />
+<progress percent="{{timer}}" stroke-width="4" activeColor="#e79841" />
 <view class="flexBox">
   <block wx:for="{{servers}}" wx:key="item">
     <template is="cardItem" data="{{...item}}"></template>
