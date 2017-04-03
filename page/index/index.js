@@ -1,9 +1,7 @@
 const totp = require('../../util/js/totp');
 Page({
   data: {
-    "servers": [
-     
-    ]
+    "servers": []
   },
   onLoad: function (options) {
     var ingress = wx.getStorageSync('ingress');
