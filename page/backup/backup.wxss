@@ -1,0 +1,23 @@
+.cardLogo{
+    text-align: center;
+}
+.cardText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardTitle{
+    line-height: 90rpx;
+}
+.cardDesc{
+    line-height: 30rpx;
+}
+.selectCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.selectCard .cardTitle{
+    font-size: 50rpx;
+}

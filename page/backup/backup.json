@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#3B3A41",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "数据备份与恢复",
+    "backgroundColor": "#8a8a8a",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "disableScroll":true
+}
