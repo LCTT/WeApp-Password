@@ -6,13 +6,14 @@ Page({
       { name: '网站', value: 'website' },
       { name: 'App', value: 'app' },
       { name: '游戏', value: 'game' },
+      { name: '其他', value: 'other' }
     ]
   },
   onLoad: function (options) {
     var that = this;
     /* 从存储中取出所有的server  */
     var serverStr = wx.getStorageSync('servers');
-    if (serverStr == ''){
+    if (serverStr == '') {
       serverStr = "[]";
     }
     var servers = JSON.parse(serverStr);
@@ -76,7 +77,7 @@ Page({
   onUnload: function () {
     // 页面关闭
   },
-  radioChange:function(){},
+  radioChange: function () { },
   submitData: function (e) {
     var that = this;
     var old_data = wx.getStorageSync('servers');
@@ -93,7 +94,7 @@ Page({
       latitude: that.data.latitude, //此处为页面的data
       longitude: that.data.longitude,
       signedBy: that.data.name,
-      "type":e.detail.value.type
+      "type": e.detail.value.type
     })
     var new_length = servers.length;
     if (new_length == old_length) {
@@ -112,11 +113,11 @@ Page({
       var servers_str = JSON.stringify(servers);
       wx.setStorageSync('servers', servers_str);
       wx.showToast({
-        "title":"添加成功",
-        "icon":"success",
-        complete:function(e){
+        "title": "添加成功",
+        "icon": "success",
+        complete: function (e) {
           wx.redirectTo({
-            url: '../view/view?secret='+ that.data.secret
+            url: '../view/view?secret=' + that.data.secret
           })
         }
       })
