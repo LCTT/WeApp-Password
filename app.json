@@ -1,14 +1,22 @@
 {
     "pages": [
+        
         "page/index/index",
+        "page/index/slide",
+        "page/add/add",
         "page/options/options",
+        "page/backup/backup",
+        "page/book/book",
+        "page/about/about",
+        "page/book/linuxcn",
+        "page/book/github",
         "page/view/view"
     ],
     "tabBar": {
         "color": "#8a8a8a",
         "selectedColor": "#373739",
-        "backgroundColor":"#ffffff",
-        "borderStyle":"white",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
         "list": [
             {
                 "pagePath": "page/index/index",
@@ -24,5 +32,5 @@
             }
         ]
     },
-    "debug":true
+    "debug": false
 }

@@ -34,6 +34,12 @@ page {
 .mainGreen {
   background-color: #7aca6d;
 }
+.mainWhite{
+  background-color: #fff;
+}
+.mainWhite text{
+  color:#000;
+}
 
 /*
  * 公共样式
@@ -77,8 +83,8 @@ page {
 /* 全局选项 */
 .optionCard{
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 10rpx;
   padding: 20rpx;
   margin: 10rpx 20rpx;
@@ -95,12 +101,14 @@ page {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 30rpx;
+  padding-bottom: 20rpx;
 }
 
 .optionName{
   font-size: 70rpx;
+  text-align: right;
 }
+
 
 /* 工具类 */
 .copyright{
@@ -109,4 +117,7 @@ page {
   color: #fff;
   opacity: 0.8;
   margin: 30rpx;
+}
+progress{
+  margin-bottom: 10rpx;
 }
