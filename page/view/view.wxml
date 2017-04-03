@@ -1,3 +1,4 @@
+<progress percent="{{timer}}" stroke-width="4" color="#e79841" />
 <view class="flexBox">
   <view class="viewImageBox">
    <text class="iconfont icon-{{type?type:server}}" style="font-size:120rpx; opacity: 0.8;margin-top:20rpx;"></text>
