@@ -1,9 +1,10 @@
 <import src="../../util/template/card.wxml" />
 <view class="flexBox">
-  <block wx:for="{{server}}">
+  <block wx:for="{{server}}" wx:key="item">
     <template is="cardItem" data="{{...item}}"></template>
   </block>
   <view class="addCard" catchtap="addServer">
-    <text class="iconfont icon-scan"></text><text class="addText">添加场景</text>
+    <text class="iconfont icon-scan"></text>
+    <text class="addText">添加场景</text>
   </view>
 </view>

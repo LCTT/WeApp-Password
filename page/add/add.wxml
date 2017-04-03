@@ -13,7 +13,7 @@
       <textarea auto-height placeholder="在这里填写备注信息" name="desc" />
       <text class="h1">类型</text>
       <radio-group class="radio-group" name="type" bindchange="radioChange">
-        <label class="radio" wx:for="{{items}}">
+        <label class="radio" wx:for="{{items}}" wx:key="item">
           <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
         </label>
       </radio-group>
