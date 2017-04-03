@@ -1,0 +1,42 @@
+<view class="flexBox">
+  <view class="card mainBlue">
+    <text class="title">
+      在 linux.cn 网站上使用
+    </text>
+    <text class="h1">
+      登录账户
+    </text>
+    <text class="p">
+      首先，先使用帐号密码或社会化登录来登录到 Linux 中国（https://linux.cn/），登录成功后，点击右上角头像旁边的设置连接，进入个人设置页面
+    </text>
+    <image src="https://linux.cn/static/image/otp/linuxcn-otpsetup-1.jpg" class="img"></image>
+    <text class="h1">
+      进入设置页面
+    </text>
+    <text class="p">
+      进入设置页面后，点击左下角的密码安全选项，进入到密码安全设置页面。
+    </text>
+    <image src="https://linux.cn/static/image/otp/linuxcn-otpsetup-2.jpg"style="height:400rpx" class="img"></image>
+    <text class="h1">
+      设置验证器
+    </text>
+    <image src="https://linux.cn/static/image/otp/linuxcn-otpsetup-3.jpg" class="img"></image>
+    <text class="p">
+      先在“旧密码”处输入你原先的密码。
+
+      点击“安全提问”，选择最下面的 “Google 身份验证器”，会在下方显示一个用于绑定场景的“二维码”及其“回答”。
+    </text>
+    <image src="https://linux.cn/static/image/otp/linuxcn-otpsetup-4.jpg" style="height:600rpx" class="img"></image>
+    <text class="p">
+    a、在“运维密码”中的场景中，点击右下方的“扫描二维码”按钮来扫描该二维码；扫描成功后，小程序中会显示场景的信息，可以根据情况修改，或直接点击“增加场景”完成；然后会返回到该场景详情页，并显示当前的六位数字的一次性密码。
+
+    b、将显示的六位数字的一次性密码输入到“安全提问”中的验证器 “回答”中。
+
+    c、点击“密码安全”页面下方的“保存”，即可完成绑定。
+    </text>
+    <text class="p">
+    你可以在场景详情页“生成二维码”，然后将生成的二维码打印并贴到附近，直接用微信扫一扫即可显示该场景的一次性密码。
+    </text>
+  </view>
+  <text class="copyright">Powered by Linux中国</text>
+</view>
