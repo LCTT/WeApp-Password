@@ -11,12 +11,12 @@
 }
 .p{
     text-align: left;
-    font-size: 30rpx;
-    line-height: 30rpx;
+    font-size: 25rpx;
+    line-height: 40rpx;
 }
 .img{
-    width:640rpx;
-    height: 360rpx;
+    width:670rpx;
+    height: 340rpx;
     margin: 0 auto;
-    padding: 20rpx;
+    padding:  20rpx 0rpx;
 }
