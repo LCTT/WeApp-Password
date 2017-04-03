@@ -1,0 +1,25 @@
+<view class="flexBox">
+
+
+    <view class="card mainBlue">
+       <text class="title">
+       在 Github 上使用 运维密码
+       </text>
+
+       <text class="h1">
+       首先，你应该怎么样怎么样怎么样怎么样首先，你应该怎么样怎么样怎么样怎么样
+       </text>
+       <text class="p">
+       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
+       
+       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
+       </text>
+      <image src="https://dn-linuxcn.qbox.me/data/attachment/album/201703/18/215953non67m8ljoele7i0.png" class="img"></image>
+       <text class="p">
+       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
+       
+       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
+       </text>
+    </view>
+    <text class="copyright">Powered By Linux中国</text>
+</view>
