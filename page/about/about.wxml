@@ -20,4 +20,5 @@
       <text class="contentText"> https://github.com/google/google-authenticator</text>
     </view>
   </view>
+  <text class="copyright">Powered by Linux中国</text>
 </view>

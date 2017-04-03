@@ -5,4 +5,5 @@
         <text>{{item.title}}</text>
     </view>
     </block>
+    <text class="copyright">Powered by Linux中国</text>
 </view>
