@@ -4,19 +4,19 @@ Page({
     // 定义页面的跳转
     config:[
       {
-        "url":"/page/view/view",
+        "url":"/page/backup/backup",
         "name":"数据备份",
         "desc":"备份/恢复",
         "color":"mainRed",
         "typed" :"restore"
       },
-      {
-        "url":"/page/view/view",
-        "name":"云服务",
-        "desc":"同步云端",
-        "color":"mainBlue",
-         "typed" :"cloud"
-      },
+      // {
+      //   "url":"/page/view/view",
+      //   "name":"云服务",
+      //   "desc":"同步云端",
+      //   "color":"mainBlue",
+      //    "typed" :"cloud"
+      // },
       {
         "url":"/page/book/book",
         "name":"使用指南",
