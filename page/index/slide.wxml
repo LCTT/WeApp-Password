@@ -1,0 +1,39 @@
+<scroll-view class="scroll-box" scroll-into-view="{{toView}}" scroll-y="true" bindscroll="bindScroll" style="height:{{screenHeight}}px">
+  <view id="first" class="scroll-item bg-first" style="height:{{screenHeight}}px">
+    <text class="slogan">运维密码</text>
+    <view class="desc-box">
+    <text class="desc">每一位运维人员都需要的</text>
+    <text class="desc"> OTP 管理工具</text>
+    </view>
+    
+    <button class="bg-first" catchtap="nextScreen">嗯</button>
+  </view>
+  <view id="second" class="scroll-item bg-third" style="height:{{screenHeight}}px">
+    <text class="slogan">数据备份</text>
+     <view class="desc-box">
+    <text class="desc">轻松备份已有数据</text>
+    <text class="desc">手机丢失也无忧</text>
+    </view>
+    
+    <button class="bg-third" catchtap="nextScreen">嗯</button>
+  </view>
+  <view id="third" class="scroll-item bg-second" style="height:{{screenHeight}}px">
+    <text class="slogan">安全 方便</text>
+     <view class="desc-box">
+    <text class="desc">支持 SSH、网站等 TOTP 密码验证</text>
+    <text class="desc">扫一扫就能查看 OTP</text>
+    </view>
+    <button class="bg-second" catchtap="nextScreen">嗯</button>
+  </view>
+  <view id="fourth" class="scroll-item bg-third" style="height:{{screenHeight}}px">
+    <text class="slogan">可靠 轻量</text>
+     <view class="desc-box">
+    <text class="desc">有微信就能用</text>
+    <text class="desc">关联到你的微信号身份</text>
+    </view>
+    
+    <button class="bg-third" catchtap="skip">走着</button>
+  </view>
+  
+</scroll-view>
+<text class="skip" catchtap="skip">跳过</text>
