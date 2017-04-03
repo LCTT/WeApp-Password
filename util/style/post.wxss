@@ -1,0 +1,22 @@
+.title{
+    text-align: center;
+    font-size: 40rpx;
+    line-height: 25rpx; 
+    margin: 0rpx;
+}
+.h1{
+    text-align: left;
+    font-size: 35rpx;
+    line-height: 45rpx;
+}
+.p{
+    text-align: left;
+    font-size: 30rpx;
+    line-height: 30rpx;
+}
+.img{
+    width:640rpx;
+    height: 360rpx;
+    margin: 0 auto;
+    padding: 20rpx;
+}
