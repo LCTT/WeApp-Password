@@ -12,11 +12,11 @@
       <text class="h1">备注</text>
       <textarea auto-height value="{{desc}}" placeholder="在这里填写备注信息" name="desc" />
       <text class="h1">类型</text>
-      <radio-group class="radio-group" name="type" bindchange="radioChange">
-        <label class="radio" wx:for="{{items}}" wx:key="item">
-          <radio value="{{item.value}}" />{{item.name}}
-        </label>
-      </radio-group>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          当前类型：{{array[index]}}
+        </view>
+      </picker>
     </view>
     <button class="btn-block" type="default" catchtap="updateLocation">更新地址</button>
     <button class="btn-block" type="primary" form-type="submit">确定</button>

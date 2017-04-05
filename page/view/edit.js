@@ -1,13 +1,8 @@
 var helper = require("../../util/js/helper");
 Page({
   data: {
-    items: [
-      { name: '服务器', value: 'server', checked: 'true' },
-      { name: '网站', value: 'website' },
-      { name: 'App', value: 'app' },
-      { name: '游戏', value: 'game' },
-      { name: '其他', value: 'other' }
-    ]
+    array: ["服务器", "网站", "App", "游戏", "其他"],
+    index:0
   },
   onLoad: function (options) {
     var that = this;
@@ -27,11 +22,12 @@ Page({
           signedBy: value.signedBy,
           longitude: value.longitude,
           latitude: value.latitude,
-          "type": value.type,
+          typed: value.type,
         })
+        that.setIndex(value.type)
       }
     });
-    
+
   },
   onReady: function () {
     // 页面渲染完成
@@ -87,6 +83,7 @@ Page({
       })
     } else {
       var servers_str = JSON.stringify(server);
+      var servers_str = JSON.stringify(newserver);
       wx.setStorageSync('servers', servers_str);
       wx.showToast({
         "title": "编辑成功！",
@@ -104,26 +101,68 @@ Page({
       index: e.detail.value
     })
   },
-  updateLocation:function(e){
+  updateLocation: function (e) {
     var that = this;
     wx.getLocation({
       type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
-      success: function(res){
+      success: function (res) {
         that.setData({
           latitude: res.latitude,
           longitude: res.longitude
         });
         wx.showToast({
-          "title":"地址获取成功！",
-          "icon":"success"
+          "title": "地址获取成功！",
+          "icon": "success"
         })
       },
-      fail: function(res) {
+      fail: function (res) {
         // fail
       },
-      complete: function(res) {
+      complete: function (res) {
         // complete
       }
     })
+  },
+  bindPickerChange: function (e) {
+    var that = this;
+    that.setData({index:e.detail.value})
+    switch (e.detail.value) {
+      case "0":
+        that.setData({ typed: "server"});
+        break;
+      case "1":
+        that.setData({ typed: "website" });
+        break;
+      case "2":
+        that.setData({ typed: "app" });
+        break;
+      case "3":
+        that.setData({ typed: "game" });
+        break;
+      default:
+        that.setData({ typed: "other" });
+        break;
+
+    }
+  },
+  setIndex:function(num){
+    var that = this;
+    switch(num){
+      case "server":
+        that.setData({ index: 0 });
+        break;
+      case "website":
+        that.setData({ index: 1 });
+        break;
+      case "app":
+        that.setData({ index: 2 });
+        break;
+      case "game":
+        that.setData({ index: 3 });
+        break;
+      default:
+        that.setData({ index: 4 });
+        break;
+    }
   }
 })

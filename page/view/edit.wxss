@@ -19,3 +19,7 @@ label{
     color: #999;
     font-size:30rpx;
 }
+.picker{
+    color: #999;
+    font-size:30rpx;
+}
