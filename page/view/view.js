@@ -77,4 +77,50 @@ Page({
       code: newToken
     })
   },
+  createQR:function(){
+    var that = this;
+    wx.redirectTo({
+      url: './qr?id='+ that.data.secret+ '&username='+that.data.username+'&name='+that.data.name+'&desc='+that.data.desc
+    })
+  },
+    deleteOne: function (e) {
+    var that = this;
+    wx.showModal({
+      title: "注意！",
+      content: "你是否要删除由“"+that.data.signedBy+"”颁发的，用户名为 "+that.data.username+" 的密码吗？此操作不可恢复。",
+      success: function (res) {
+        if (res.confirm) {
+
+          var servers = wx.getStorageSync('servers');
+          servers = JSON.parse(servers);
+          var server = [];
+          servers.forEach(function (value, index, array) {
+            if (value.key != that.data.secret) {
+              server.push(value);
+            }
+          });
+          server = JSON.stringify(server);
+          wx.setStorage({
+            key: 'servers',
+            data: server,
+            success: function (res) {
+              wx.showToast({
+                title: '删除场景成功',
+                icon: 'success',
+                duration: 2000,
+                success: function () {
+                  wx.switchTab({
+                    url: '../index/index'
+                  })
+                }
+              })
+            }
+          })
+        } else {
+
+        }
+      }
+    })
+
+  },
 })

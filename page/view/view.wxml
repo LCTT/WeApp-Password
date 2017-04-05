@@ -1,12 +1,11 @@
 <progress percent="{{timer}}" stroke-width="4" color="#e79841" />
 <view class="flexBox">
   <view class="viewImageBox">
-   <text class="iconfont icon-{{type?type:server}}" style="font-size:120rpx; opacity: 0.8;margin-top:20rpx;"></text>
+    <text class="iconfont icon-{{type?type:server}}" style="font-size:120rpx; opacity: 0.8;margin-top:20rpx;"></text>
   </view>
   <view class="infoBox">
     <text class="viewUsername">
-     {{username}}
-
+      {{username}}
     </text>
     <text class="viewCode">
       {{code}}
@@ -17,9 +16,12 @@
       <text class="descTitleText">详情</text>
     </view>
     <view class="descContent">
-       {{desc?desc:"没有填写描述"}}
+      {{desc?desc:"没有填写描述"}}
     </view>
     <map id="map" longitude="113.324520" latitude="23.099994" scale="14" class="descMap"></map>
   </view>
+  <button class="btn-block" type="default" catchtap="createQR">生成二维码</button>
+  <button class="btn-block" type="primary">编辑</button>
+  <button class="btn-block" catchtap="deleteOne" type="warn">删除</button>
   <text class="copyright">Powered by Linux中国</text>
 </view>

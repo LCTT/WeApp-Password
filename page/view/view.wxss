@@ -61,3 +61,7 @@
     height: 500rpx;
     border-radius: 10rpx;
 }
+.btn-block{
+    width:90%;
+    margin:10rpx auto;
+}
