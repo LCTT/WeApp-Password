@@ -145,7 +145,7 @@ Page({
   },
   editOne:function(){
     var that =this;
-    wx.navigateTo({
+    wx.redirectTo({
       url: './edit?id='+that.data.secret
     })
   }

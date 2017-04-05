@@ -6,11 +6,14 @@
         "page/add/add",
         "page/options/options",
         "page/backup/backup",
+        "page/backup/qrcode",
         "page/book/book",
         "page/about/about",
         "page/book/linuxcn",
         "page/book/github",
-        "page/view/view"
+        "page/view/view",
+        "page/view/qr",
+        "page/view/edit"
     ],
     "tabBar": {
         "color": "#8a8a8a",
