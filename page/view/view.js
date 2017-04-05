@@ -12,14 +12,17 @@ Page({
      * str to obj
      */
     servers = JSON.parse(servers);
+    var  is_exist = false;
     /**
      * forEach 处理
      */
+    
     servers.forEach(function (value, index, key) {
       /**
        * 找到目标数据
        */
       if (value.secret == options.id) {
+        is_exist = true;
         that.setData({
           name: value.name,
           username: value.username,
@@ -29,13 +32,30 @@ Page({
           signedBy: value.signedBy,
           longitude:value.longitude,
           latitude:value.latitude,
-          "type":value.type
+          "type":value.type,
+          is_exist :is_exist
         })
+        
         wx.setNavigationBarTitle({
           title: value.name
         })
       }
     })
+    if(is_exist == false){
+       wx.showModal({
+          title: '您无权查看当前场景',
+          content: '您无权查看当前场景，请联系场景所有者！',
+          showCancel: false,
+          success: function (res) {
+            /*
+            * 使用switchTab方法切换到场景管理页面
+            */
+            wx.switchTab({
+              url: '../index/index'
+            })
+          }
+        }) 
+    }
   },
   onReady: function () {
     var that = this;

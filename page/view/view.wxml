@@ -1,3 +1,4 @@
+<block wx:if="{{is_exist}}">
 <progress percent="{{timer}}" stroke-width="4" color="#e79841" />
 <view class="flexBox">
   <view class="viewImageBox">
@@ -25,3 +26,4 @@
   <button class="btn-block" catchtap="deleteOne" type="warn">删除</button>
   <text class="copyright">Powered by Linux中国</text>
 </view>
+</block>
