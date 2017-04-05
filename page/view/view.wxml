@@ -17,7 +17,7 @@
       <text class="descTitleText">详情</text>
     </view>
     <view class="descContent">
-      {{desc?desc:"没有填写描述"}}
+      {{desc}}
     </view>
     <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" class="descMap"></map>
   </view>
