@@ -80,7 +80,7 @@ Page({
         success: function (res) {
           if (res.confirm) {
             wx.switchTab({
-              url: '../servers/servers'
+              url: '../index/index'
             })
           }
         }
