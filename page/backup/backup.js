@@ -1,4 +1,4 @@
-// page/backup/backup.js
+const helper = require('../../util/js/helper');
 Page({
   data:{},
   onLoad:function(options){
@@ -20,9 +20,10 @@ Page({
     var that = this;
     wx.scanCode({
       success: function (res) {
+        console.log(res.result);
         wx.showToast({
           title: '恢复中',
-          icon: 'success',
+          icon: 'loading',
           duration: 10000
         })
         var ignore_numbers = 0;
@@ -56,7 +57,7 @@ Page({
               success:function(res){
                 
                   wx.switchTab({
-                    url: '../servers/servers'
+                    url: '../index/index'
                   })
                 
               }
