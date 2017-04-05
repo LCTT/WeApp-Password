@@ -12,11 +12,11 @@ Page({
      * str to obj
      */
     servers = JSON.parse(servers);
-    var  is_exist = false;
+    var is_exist = false;
     /**
      * forEach 处理
      */
-    
+
     servers.forEach(function (value, index, key) {
       /**
        * 找到目标数据
@@ -30,31 +30,31 @@ Page({
           secret: value.secret,
           code: totp.getCode(options.id),
           signedBy: value.signedBy,
-          longitude:value.longitude,
-          latitude:value.latitude,
-          "type":value.type,
-          is_exist :is_exist
+          longitude: value.longitude,
+          latitude: value.latitude,
+          "type": value.type,
+          is_exist: is_exist
         })
-        
+
         wx.setNavigationBarTitle({
           title: value.name
         })
       }
     })
-    if(is_exist == false){
-       wx.showModal({
-          title: '您无权查看当前场景',
-          content: '您无权查看当前场景，请联系场景所有者！',
-          showCancel: false,
-          success: function (res) {
-            /*
-            * 使用switchTab方法切换到场景管理页面
-            */
-            wx.switchTab({
-              url: '../index/index'
-            })
-          }
-        }) 
+    if (is_exist == false) {
+      wx.showModal({
+        title: '您无权查看当前场景',
+        content: '您无权查看当前场景，请联系场景所有者！',
+        showCancel: false,
+        success: function (res) {
+          /*
+          * 使用switchTab方法切换到场景管理页面
+          */
+          wx.switchTab({
+            url: '../index/index'
+          })
+        }
+      })
     }
   },
   onReady: function () {
@@ -97,17 +97,17 @@ Page({
       code: newToken
     })
   },
-  createQR:function(){
+  createQR: function () {
     var that = this;
     wx.redirectTo({
-      url: './qr?id='+ that.data.secret+ '&username='+that.data.username+'&name='+that.data.name+'&desc='+that.data.desc
+      url: './qr?id=' + that.data.secret + '&username=' + that.data.username + '&name=' + that.data.name + '&desc=' + that.data.desc
     })
   },
-    deleteOne: function (e) {
+  deleteOne: function (e) {
     var that = this;
     wx.showModal({
       title: "注意！",
-      content: "你是否要删除由“"+that.data.signedBy+"”颁发的，用户名为 "+that.data.username+" 的密码吗？此操作不可恢复。",
+      content: "你是否要删除由“" + that.data.signedBy + "”颁发的，用户名为 " + that.data.username + " 的密码吗？此操作不可恢复。",
       success: function (res) {
         if (res.confirm) {
 
@@ -143,4 +143,10 @@ Page({
     })
 
   },
+  editOne:function(){
+    var that =this;
+    wx.navigateTo({
+      url: './edit?id='+that.data.secret
+    })
+  }
 })
