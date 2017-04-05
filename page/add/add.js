@@ -35,7 +35,7 @@ Page({
       }
     });
     wx.getLocation({
-      type: 'wgs84', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
+      type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
       success: function (res) {
         /*
       * 获取到GPS信息后，连带传入的options参数中的值都同步到视图中，用于页面展示和后续数据存储时使用。
