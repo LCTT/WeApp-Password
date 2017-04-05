@@ -18,6 +18,11 @@
       <text class="contentText"> http://tools.ietf.org/id/draft-mraihi-totp-timebased-06.html</text>
       <text class="subTitleText">Google Authenticator</text>
       <text class="contentText"> https://github.com/google/google-authenticator</text>
+      <text class="titleText">开源信息</text>
+      <text class="subTitleText">项目地址</text>
+      <text class="contentText">https://github.com/LCTT/WeApp-Password</text>
+      <text class="subTitleText">License</text>
+      <text  class="contentText">AGPL-3.0</text>
     </view>
   </view>
   <text class="copyright">Powered by Linux中国</text>

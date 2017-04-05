@@ -4,6 +4,5 @@
     "navigationBarTitleText": "关于运维密码",
     "backgroundColor": "#8a8a8a",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false,
-    "disableScroll":true
+    "enablePullDownRefresh": false
 }
