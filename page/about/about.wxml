@@ -10,9 +10,9 @@
   <view class="card mainBlue">
     <view class="mainContent">
       <text class="titleText">主创团队</text>
-      <text class="subTitleText">设计师：@一一</text>
-      <text class="subTitleText">产品经理：@老王</text>
       <text class="subTitleText">开发者：@Bestony</text>
+      <text class="subTitleText">产品经理：@wxy</text>
+      <text class="subTitleText">UI 设 计：betty</text>
       <text class="titleText">参考文献</text>
       <text class="subTitleText">TOTP RFC Draft</text>
       <text class="contentText"> http://tools.ietf.org/id/draft-mraihi-totp-timebased-06.html</text>
@@ -22,7 +22,7 @@
       <text class="subTitleText">项目地址</text>
       <text class="contentText">https://github.com/LCTT/WeApp-Password</text>
       <text class="subTitleText">License</text>
-      <text  class="contentText">AGPL-3.0</text>
+      <text class="contentText">AGPL-3.0</text>
     </view>
   </view>
   <text class="copyright">Powered by Linux中国</text>
