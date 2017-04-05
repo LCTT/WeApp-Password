@@ -8,11 +8,13 @@
       <text class="cardDesc">您可以在本页面备份数据或恢复数据</text>
     </view>
   </view>
-  <view class="card darkBlue selectCard">
-    <text class="iconfont icon-backup" style="font-size:100rpx;line-height:100rpx; opacity: 0.8;margin-left:10rpx;"></text>
-    <text class="cardTitle">数据备份</text>
-  </view>
-  <view class="card darkBlue selectCard">
+  <navigator url="../backup/qrcode">
+    <view class="card darkBlue selectCard">
+      <text class="iconfont icon-backup" style="font-size:100rpx;line-height:100rpx; opacity: 0.8;margin-left:10rpx;"></text>
+      <text class="cardTitle">数据备份</text>
+    </view>
+  </navigator>
+  <view class="card darkBlue selectCard" catchtap="restoreData">
     <text class="iconfont icon-restore" style="font-size:100rpx;line-height:100rpx; opacity: 0.8;margin-left:10rpx;"></text>
     <text class="cardTitle">数据恢复</text>
   </view>
