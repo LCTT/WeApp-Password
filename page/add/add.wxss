@@ -9,3 +9,12 @@
 .radio-group radio{
     margin: 10rpx 0rpx;
 }
+input,textarea{
+    border-bottom:1rpx solid #c6c6c6;
+    color: #999;
+    font-size: 30rpx;
+}
+label{
+    color: #999;
+    font-size:30rpx;
+}
