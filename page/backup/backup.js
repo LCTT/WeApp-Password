@@ -20,7 +20,6 @@ Page({
     var that = this;
     wx.scanCode({
       success: function (res) {
-        console.log(res.result);
         wx.showToast({
           title: '恢复中',
           icon: 'loading',

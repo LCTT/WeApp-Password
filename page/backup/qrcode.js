@@ -105,7 +105,6 @@ Page({
       size.h = height;
     } catch (e) {
       // Do something when catch error
-      console.log("获取设备信息失败" + e);
     }
     return size;
   },
@@ -127,13 +126,11 @@ Page({
       canvasId: 'mycanvas',
       success: function (res) {
         var tempFilePath = res.tempFilePath;
-        console.log(tempFilePath);
         that.setData({
           imagePath: tempFilePath,
         });
       },
       fail: function (res) {
-        console.log(res);
       }
     });
   },
