@@ -123,7 +123,7 @@ Page({
           servers = JSON.parse(servers);
           var server = [];
           servers.forEach(function (value, index, array) {
-            if (value.key != that.data.secret) {
+            if (value.secret != that.data.secret) {
               server.push(value);
             }
           });
