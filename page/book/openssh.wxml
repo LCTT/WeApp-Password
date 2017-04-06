@@ -1,0 +1,69 @@
+<view class="flexBox">
+  <view class="card mainBlue">
+    <text class="title">
+       在 OpenSSH 上使用运维密码
+    </text>
+
+    <text class="h1">
+      前置需求
+    </text>
+    <text class="p">       
+      首先我们需要一些准备工作：
+
+      一台运行着 OpenSSH 服务（版本大于 6.2）的 Linux 主机
+      一台能运行微信的智能手机
+      一台支持 SSH 登录的终端
+    </text>
+    <text class="h1">
+      在 Linux 系统中安装 Google 身份验证器服务器端组件
+    </text>
+    <text class="p">       
+      在 Ubuntu 上安装 Google 身份验证器服务器端组件：
+      sudo apt-get install libpam-google-authenticator
+
+      在 Fedora 上安装 Google 身份验证器服务器端组件：
+      sudo dnf install google-authenticator
+
+      在 CentOS 上安装 Google 身份验证器服务器端组件，需要首先启用 EPEL 软件库，然后运行如下命令： 
+      sudo yum install google-authenticator
+
+      你也可以从 GitHub 下载源代码，手动编译。具体编译方法请参照 GitHub 上的说明。项目地址：
+      https://github.com/google/google-authenticator-libpam
+    </text>
+    <text class="h1">
+      配置 google-authenticator
+    </text>
+    <text class="p">       
+      使用以下命令生成验证密钥：
+      google-authenticator
+
+      配置过程中会询问你一些问题，如不确定都可以采用默认选择。
+      配置中首先会显示一个二维码，请用本小程序“运维密码”扫描它以添加该场景，这样就把“运维密码”和你服务器上的 Google 身份验证器匹配上了。
+    </text>
+    <text class="h1">
+      配置 SSH 服务
+    </text>
+    <text class="p">       
+      使用如下命令在 /etc/pam.d/sshd 文件添加认证模块：
+      echo "auth required pam_google_authenticator.so" >>/etc/pam.d/sshd
+
+      配置挑战式密码认证：
+      sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config
+
+      重启 sshd 服务：
+      systemctl restart sshd.service
+ 
+      切记，如果你是远程登录到服务器上配置，切勿退出当前的 SSH 会话，而应该另外开一个会话去测试 SSH 登录。重启不会中断当前的 SSH 会话。
+    </text>
+    <text class="h1">
+      测试 SSH 登录
+    </text>
+    <text class="p">       
+      另外开一个终端窗口进行连接，不要关闭当前的 SSH 连接。
+
+      服务器会提示首先输入服务器的密码，接着会让输入“运维密码”生成的 6 位数字密钥。当两者都正确时才能成功登录服务器。
+    </text>
+
+  </view>
+  <text class="copyright">Powered by Linux中国</text>
+</view>

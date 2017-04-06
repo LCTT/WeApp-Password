@@ -10,6 +10,10 @@ Page({
       // }, 
       
       {
+        title: "在 OpenSSH 上使用运维密码",
+        color: "mainGreen",
+        url: "/page/book/openssh"
+      }, {
         title: "在 Github 上使用运维密码",
         color: "mainBlue",
         url: "/page/book/github"

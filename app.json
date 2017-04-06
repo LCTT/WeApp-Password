@@ -11,6 +11,7 @@
         "page/about/about",
         "page/book/linuxcn",
         "page/book/github",
+        "page/book/openssh",
         "page/view/view",
         "page/view/qr",
         "page/view/edit"
