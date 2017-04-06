@@ -52,7 +52,7 @@ Page({
     var server = [];
     var old_length = servers.length;
     servers.forEach(function (value, index, array) {
-      if (value.key != that.data.secret) {
+      if (value.secret != that.data.secret) {
         server.push(value);
       }
     });
@@ -83,7 +83,6 @@ Page({
       })
     } else {
       var servers_str = JSON.stringify(server);
-      var servers_str = JSON.stringify(newserver);
       wx.setStorageSync('servers', servers_str);
       wx.showToast({
         "title": "编辑成功！",
@@ -104,7 +103,7 @@ Page({
   updateLocation: function (e) {
     var that = this;
     wx.getLocation({
-      type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
+      type: 'gcj02', 
       success: function (res) {
         that.setData({
           latitude: res.latitude,
