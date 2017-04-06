@@ -18,7 +18,7 @@
         </view>
       </picker>
     </view>
-    <button class="btn-block" type="default" catchtap="updateLocation">更新地址</button>
+    <button class="btn-block" type="warn" catchtap="updateLocation">更新地址</button>
     <button class="btn-block" type="primary" form-type="submit">确定</button>
   </form>
   <text class="copyright">Powered by Linux中国</text>
