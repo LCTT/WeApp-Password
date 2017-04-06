@@ -1,25 +1,51 @@
 <view class="flexBox">
-
-
-    <view class="card mainBlue">
-       <text class="title">
-       在 Github 上使用 运维密码
-       </text>
-
-       <text class="h1">
-       首先，你应该怎么样怎么样怎么样怎么样首先，你应该怎么样怎么样怎么样怎么样
-       </text>
-       <text class="p">
-       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
-       
-       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
-       </text>
-      <image src="https://dn-linuxcn.qbox.me/data/attachment/album/201703/18/215953non67m8ljoele7i0.png" class="img"></image>
-       <text class="p">
-       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
-       
-       这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址这里是一大段文字问地址
-       </text>
-    </view>
-    <text class="copyright">Powered by Linux中国</text>
+  <view class="card mainBlue">
+    <text class="title">
+      在 Github 上使用 运维密码
+    </text>
+    <text class="h1">
+      在 Github 上开启两步验证
+    </text>
+    <text class="p">
+      在 Github 页面的右上角，导航栏的右侧，点击你的头像，在弹出的菜单中，选择 Setting
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/djsb9.png" class="img"></image>
+    <text class="p">
+      在打开的 Setting 页面，左侧的导航栏中找到 Security ,点击 Security ，进入到安全页面
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/fol1o.png" class="img"></image>
+    <text class="p">
+      在安全页面，我们可以看到这里的两步验证提示，点击右侧的 Set up two-factor authentication 进入到设置的页面
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/vammj.png" class="img"></image>
+    <text class="p">
+      在两步验证页面，选择 Set up using an App ，进入到对应的设置页面
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/axvj3.png" class="img"></image>
+    <text class="p">
+      点击运维密码 场景列表页面的 添加场景，扫描屏幕上方的二维码，设置场景的信息，并保存。
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/gxl1l.png" class="img"></image>
+    <text class="p">
+      保存成功后，你可以看到一个 6 位的动态口令，将这个动态口令填写在页面下方的输入框内，并点击 Continue 
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/mg4rm.png" class="img"></image>
+    <text class="p">
+    添加成功后，你会看到这样的一个界面，将下方的 Code 下载，或打印下来。 
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/vomuf.png"class="img"></image>
+    <text class="p">
+    最后，点击下方的 Enable two-factor authentication ，启用两步验证
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/npb70.png" class="img"></image>
+    <text class="p">
+    当你看到这样的提示，就说明你成功的开启了两步验证
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/l2497.jpg" class="img"></image>
+     <text class="p">
+    你再次登陆时，就需要输入你的两步验证的动态口令了。
+    </text>
+    <image src="https://postimg.aliavv.com/markdown/dbibk.jpg" class="img"></image>
+  </view>
+  <text class="copyright">Powered by Linux中国</text>
 </view>
