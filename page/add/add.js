@@ -6,7 +6,7 @@ Page({
       { name: '网站', value: 'website' },
       { name: 'App', value: 'app' },
       { name: '游戏', value: 'game' },
-      { name: '其他', value: 'other' }
+      { name: '其它', value: 'other' }
     ]
   },
   onLoad: function (options) {

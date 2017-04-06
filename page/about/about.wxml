@@ -10,9 +10,9 @@
   <view class="card mainBlue">
     <view class="mainContent">
       <text class="titleText">主创团队</text>
-      <text class="subTitleText">开发者：@Bestony</text>
-      <text class="subTitleText">产品经理：@wxy</text>
-      <text class="subTitleText">UI 设 计：betty</text>
+      <text class="subTitleText">　　　开发者 ：@Bestony</text>
+      <text class="subTitleText">产品经理 ：@wxy</text>
+      <text class="subTitleText">　UI设计 ：betty</text>
       <text class="titleText">参考文献</text>
       <text class="subTitleText">TOTP RFC Draft</text>
       <text class="contentText"> http://tools.ietf.org/id/draft-mraihi-totp-timebased-06.html</text>

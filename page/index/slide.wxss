@@ -19,12 +19,15 @@ button{
 }
 .bg-first {
     background-color: #000;
+    opacity: 0.8;
 }
 .bg-second {
     background-color: #000;
+    opacity: 0.8;
 }
 .bg-third {
     background-color: #000;
+    opacity: 0.8;
 }
 .skip{
     position: absolute;

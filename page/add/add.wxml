@@ -7,7 +7,7 @@
     <view class="card mainWhite">
       <text class="h1">账号</text>
       <input value="{{username}}" placeholder="这里填写你的用户名" name="username" auto-focus/>
-      <text class="h1">场景名</text>
+      <text class="h1">场景</text>
       <input value="{{name}}" placeholder="这里填写你的场景名" name="name"/>
       <text class="h1">备注</text>
       <textarea auto-height placeholder="在这里填写备注信息" name="desc" />

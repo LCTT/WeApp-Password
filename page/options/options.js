@@ -21,7 +21,7 @@ Page({
         "url":"/page/book/book",
         "name":"使用指南",
         "desc":"教你玩转运维密码",
-        "color":"mainBlue",
+        "color":"mainRed",
          "typed" :"book"
       },
       {

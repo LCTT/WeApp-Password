@@ -11,7 +11,7 @@ Page({
       
       {
         title: "在 OpenSSH 上使用运维密码",
-        color: "mainGreen",
+        color: "mainBlue",
         url: "/page/book/openssh"
       }, {
         title: "在 Github 上使用运维密码",
@@ -19,7 +19,7 @@ Page({
         url: "/page/book/github"
       }, {
         title: "在 Linux 中国上使用运维密码",
-        color: "mainYellow",
+        color: "mainBlue",
         url: "/page/book/linuxcn"
       }
     ]

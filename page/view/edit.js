@@ -1,7 +1,7 @@
 var helper = require("../../util/js/helper");
 Page({
   data: {
-    array: ["服务器", "网站", "App", "游戏", "其他"],
+    array: ["服务器", "网站", "App", "游戏", "其它"],
     index:0
   },
   onLoad: function (options) {
