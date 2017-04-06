@@ -18,4 +18,5 @@
     <text class="iconfont icon-restore" style="font-size:100rpx;line-height:100rpx; opacity: 0.8;margin-left:10rpx;"></text>
     <text class="cardTitle">数据恢复</text>
   </view>
+  <text class="copyright">Powered by Linux中国</text>
 </view>
