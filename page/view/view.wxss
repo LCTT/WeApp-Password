@@ -26,7 +26,7 @@
 .viewCode {
   font-size: 90rpx;
   line-height: 40rpx;
-  margin-bottom: 0rpx;
+  margin-bottom: 80rpx;
 }
 
 .descBox {
@@ -34,8 +34,7 @@
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 10rpx;
-  margin: 50rpx 40rpx;
-  margin-top: 80rpx;
+  margin: 10rpx 40rpx;
   background-color: #fff;
 }
 
@@ -48,7 +47,7 @@
 .descTitleText {
   margin-left: 20rpx;
   font-size: 25rpx;
-  color: #BCBCBC;
+  color: #bcbcbc;
 }
 
 .descContent {
@@ -56,12 +55,15 @@
   font-size: 30rpx;
 }
 
-.descMap{
-    width: 100%;
-    height: 500rpx;
-    border-radius: 10rpx;
+.descMap {
+  margin: 10rpx 40rpx;
+  width: 90%;
+  height: 500rpx;
+  border-radius: 30rpx;
 }
-.btn-block{
-    width:90%;
-    margin:10rpx auto;
+
+.btn-block {
+  width: 90%;
+  margin: 10rpx auto;
 }
+

@@ -12,6 +12,7 @@
       {{code}}
     </text>
   </view>
+  <block wx:if="{{desc}}">
   <view class="descBox">
     <view class="descTitle">
       <text class="descTitleText">详情</text>
@@ -19,8 +20,9 @@
     <view class="descContent">
       {{desc}}
     </view>
-    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" class="descMap"></map>
   </view>
+  </block>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" class="descMap" markers="{{marker}}"></map>
   <button class="btn-block" type="default" catchtap="createQR">生成二维码</button>
   <button class="btn-block" catchtap="editOne" type="primary">编辑</button>
   <button class="btn-block" catchtap="deleteOne" type="warn">删除</button>

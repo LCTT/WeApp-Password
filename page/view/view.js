@@ -33,7 +33,15 @@ Page({
           longitude: value.longitude,
           latitude: value.latitude,
           "type": value.type,
-          is_exist: is_exist
+          is_exist: is_exist,
+          marker: [{
+            longitude: value.longitude,
+            latitude: value.latitude,
+            iconPath:"/images/point.png",
+            title:value.name,
+            width:32,
+            height:32
+          }]
         })
 
         wx.setNavigationBarTitle({
@@ -143,10 +151,10 @@ Page({
     })
 
   },
-  editOne:function(){
-    var that =this;
+  editOne: function () {
+    var that = this;
     wx.redirectTo({
-      url: './edit?id='+that.data.secret
+      url: './edit?id=' + that.data.secret
     })
   }
 })
