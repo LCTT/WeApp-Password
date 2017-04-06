@@ -64,7 +64,7 @@ Page({
       latitude: that.data.latitude, //此处为页面的data
       longitude: that.data.longitude,
       signedBy: that.data.name,
-      "type": e.detail.value.type
+      "type": that.data.typed
     })
     console.log(servers)
     console.log(server)
@@ -102,9 +102,9 @@ Page({
   },
   updateLocation: function (e) {
     var that = this;
-    wx.getLocation({
-      type: 'gcj02', 
-      success: function (res) {
+    
+    wx.chooseLocation({
+      success: function(res){
         that.setData({
           latitude: res.latitude,
           longitude: res.longitude
@@ -114,11 +114,11 @@ Page({
           "icon": "success"
         })
       },
-      fail: function (res) {
-        // fail
-      },
-      complete: function (res) {
-        // complete
+      fail: function(res) {
+        wx.showToast({
+          "title": "地址获取失败！！",
+          "icon": "loading"
+        })
       }
     })
   },
