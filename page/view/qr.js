@@ -11,11 +11,6 @@ Page({
       desc:options.desc
     })
   },
-  formSubmit: function(e) {
-    wx.switchTab({
-      url: '../index/index',
-    })
-  },
   /**
    * 预览函数，后续将图片缓存到本地进行预览。
    */

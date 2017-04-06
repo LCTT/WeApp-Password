@@ -8,7 +8,5 @@
         <text style="display:block;margin-left:100rpx;text-align:left;">　　{{desc}}</text>
     </view>
   </view>
-  <form bindsubmit="formSubmit">
-    <button formType="submit" class="mybtn" type="primary">返回场景管理</button>
-  </form>
+  
 </view>
