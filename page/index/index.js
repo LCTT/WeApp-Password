@@ -138,15 +138,7 @@ Page({
       })
       return ;
     }
-    if (servers.length == that.data.servers.length) {
-      var server = that.data.servers;
-      server.forEach(function (value, index, array) {
-        value.code = totp.getCode(value.secret);
-      })
-      that.setData({
-        servers: server
-      })
-    } else {
+   
       var server = [];
       servers.forEach(function (value, index, array) {
         value.code = totp.getCode(value.secret);
@@ -155,7 +147,7 @@ Page({
       that.setData({
         servers: server
       })
-    }
+    
 
   },
   onPullDownRefresh: function () {
