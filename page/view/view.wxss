@@ -57,7 +57,7 @@
 .descMap {
   margin: 0 40rpx;
   width: 90%;
-  height: 300rpx;
+  height: 350rpx;
   border-radius: 30rpx;
 }
 

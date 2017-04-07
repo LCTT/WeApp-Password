@@ -161,7 +161,7 @@ Page({
     var that = this;
     
     return {
-      title: '拿好！这是"' + that.data.name + '"的密码信息！',
+      title: '拿好！这是我的“' + that.data.name + '”的密码信息！',
       path: '/page/add/add?secret=' + that.data.secret + "&name=" + that.data.name + "&username=" + that.data.username
     }
   },
