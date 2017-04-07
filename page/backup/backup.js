@@ -68,10 +68,9 @@ Page({
       fail: function () {
         wx.showModal({
           "title": "扫描失败",
-          "content": "请重新扫描",
+          "content": "您取消扫描或扫描了错误的二维码，请重新扫描！",
           "showCancel": false,
           "success": function (e) {
-            wx.navigateBack();
           }
         })
       },
