@@ -1,9 +1,9 @@
 <block wx:if="{{is_exist}}">
 <progress percent="{{timer}}" stroke-width="4" color="#00CE3C" />
 <view class="flexBox">
-  <view class="viewImageBox">
-    <text class="iconfont icon-{{type?type:server}}" style="font-size:120rpx; opacity: 0.8;margin-top:20rpx;"></text>
-  </view>
+  <!--<view class="viewImageBox">
+    <text class="iconfont icon-{{type?type:server}} viewImage"></text>
+  </view>-->
   <view class="infoBox">
     <text class="viewUsername">
       {{username}}
