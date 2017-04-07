@@ -34,6 +34,7 @@
   justify-content: flex-start;
   border-radius: 10rpx;
   margin: 10rpx 40rpx;
+  margin-top:50rpx;
   background-color: #fff;
 }
 
