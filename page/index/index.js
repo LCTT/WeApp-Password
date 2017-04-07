@@ -110,11 +110,17 @@ Page({
 
       },
       fail: function (res) {
-        wx.showToast({
-          title: '扫描失败！请重新扫描',
-          icon: 'loading',
-          duration: 2000
-        })
+       if (res.errMsg == 'scanCode:fail cancel') {
+
+        } else {
+          wx.showModal({
+            "title": "扫描失败",
+            "content": "您可能扫描了错误的二维码，请重新扫描！",
+            "showCancel": false,
+            "success": function (e) {
+            }
+          })
+        }
       }
     })
   },
