@@ -66,8 +66,6 @@ Page({
       signedBy: that.data.name,
       "type": that.data.typed
     })
-    console.log(servers)
-    console.log(server)
     var new_length = server.length;
     if (new_length != old_length) {
       wx.showModal({
