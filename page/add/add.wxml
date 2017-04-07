@@ -1,7 +1,7 @@
 <view class="flexBox">
   <view class="card mainBlue">
     <text class="p">密钥签发者</text>
-    <text class="h1">Linux中国</text>
+    <text class="h1">{{name}}</text>
   </view>
   <form name="form" catchsubmit="submitData">
     <view class="card mainWhite">
