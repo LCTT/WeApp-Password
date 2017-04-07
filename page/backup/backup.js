@@ -1,22 +1,22 @@
 const helper = require('../../util/js/helper');
 Page({
-  data:{},
-  onLoad:function(options){
+  data: {},
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
   },
-  onReady:function(){
+  onReady: function () {
     // 页面渲染完成
   },
-  onShow:function(){
+  onShow: function () {
     // 页面显示
   },
-  onHide:function(){
+  onHide: function () {
     // 页面隐藏
   },
-  onUnload:function(){
+  onUnload: function () {
     // 页面关闭
   },
-  restoreData:function(){
+  restoreData: function () {
     var that = this;
     wx.scanCode({
       success: function (res) {
@@ -38,8 +38,8 @@ Page({
             var is_exist = helper.inArray(value.s, old_servers)
             if (is_exist == false) {
               old_servers.push({ "secret": value.s, "name": decodeURI(value.b), "username": decodeURI(value.b), "desc": decodeURI(value.b), "latitude": value.la, "longitude": value.lo, "signedBy": decodeURI(value.b), "key": value.s })
-            }else{
-              ignore_numbers ++;
+            } else {
+              ignore_numbers++;
             }
           }
 
@@ -50,29 +50,34 @@ Page({
           success: function (res) {
             wx.hideToast();
             wx.showModal({
-              title:"恭喜！场景恢复成功！",
-              content:"您的场景已经恢复成功，共"+server.length+"个场景，跳过"+ignore_numbers+"个重复场景。",
-              showCancel:false,
-              success:function(res){
-                
-                  wx.switchTab({
-                    url: '../index/index'
-                  })
-                
+              title: "恭喜！场景恢复成功！",
+              content: "您的场景已经恢复成功，共" + server.length + "个场景，跳过" + ignore_numbers + "个重复场景。",
+              showCancel: false,
+              success: function (res) {
+
+                wx.switchTab({
+                  url: '../index/index'
+                })
+
               }
             })
           },
         })
 
       },
-      fail: function () {
-        wx.showModal({
-          "title": "扫描失败",
-          "content": "您取消扫描或扫描了错误的二维码，请重新扫描！",
-          "showCancel": false,
-          "success": function (e) {
-          }
-        })
+      fail: function (res) {
+        if (res.errMsg == 'scanCode:fail cancel') {
+
+        } else {
+          wx.showModal({
+            "title": "扫描失败",
+            "content": "您可能扫描了错误的二维码，请重新扫描！",
+            "showCancel": false,
+            "success": function (e) {
+            }
+          })
+        }
+
       },
 
     })
