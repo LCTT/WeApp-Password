@@ -159,9 +159,30 @@ Page({
   },
   onShareAppMessage: function () {
     var that = this;
+    
     return {
-      title: '拿好！这是' + that.data.name + '的密码信息！',
+      title: '拿好！这是"' + that.data.name + '"的密码信息！',
       path: '/page/add/add?secret=' + that.data.secret + "&name=" + that.data.name + "&username=" + that.data.username
     }
-  }
+  },
+  // 将生成的密钥放到剪贴板中，并提示。
+  copyCode: function (e) {
+    var that = this;
+    /**
+     * 置剪贴板
+     */
+    wx.setClipboardData({
+      data: that.data.code,
+      success: function (res) {
+        /**
+         * 展示提示
+         */
+        wx.showToast({
+          title: '代码已经复制到您的剪贴板中',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    })
+  },
 })

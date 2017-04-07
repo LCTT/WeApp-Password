@@ -8,7 +8,7 @@
     <text class="viewUsername">
       {{username}}
     </text>
-    <text class="viewCode">
+    <text class="viewCode" catchtap="copyCode">
       {{code}}
     </text>
   </view>
@@ -23,6 +23,7 @@
   </view>
   </block>
   <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" class="descMap" markers="{{marker}}"></map>
+  <text class="alertText">谨慎分享！分享相当于复制给别人密钥种子！</text>
   <button class="btn-block" type="default" catchtap="createQR">生成二维码</button>
   <button class="btn-block" catchtap="editOne" type="primary">编辑</button>
   <button class="btn-block" catchtap="deleteOne" type="warn">删除</button>

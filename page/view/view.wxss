@@ -57,7 +57,7 @@
 .descMap {
   margin: 0 40rpx;
   width: 90%;
-  height: 500rpx;
+  height: 300rpx;
   border-radius: 30rpx;
 }
 
@@ -66,3 +66,9 @@
   margin: 10rpx auto;
 }
 
+.alertText{
+  text-align: center;
+  color:red;
+  font-size: 30rpx;
+  margin: 30rpx;
+}
