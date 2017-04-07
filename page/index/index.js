@@ -153,5 +153,11 @@ Page({
   onPullDownRefresh: function () {
     this.refreshData();
     wx.stopPullDownRefresh();
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '我发现了一个可以备份的 OTP 管理器，你值得拥有！',
+      path: '/page/index/index'
+    }
   }
 })
