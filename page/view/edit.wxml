@@ -10,7 +10,9 @@
       <text class="h1">场景</text>
       <input value="{{name}}" placeholder="这里填写你的场景名" name="name" />
       <text class="h1">备注</text>
-      <textarea auto-height value="{{desc}}" placeholder="在这里填写备注信息" name="desc" />
+      <input value="{{desc}}" placeholder="在这里填写备注信息" name="desc"/>
+     
+      
       <text class="h1">类型</text>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <view class="picker">

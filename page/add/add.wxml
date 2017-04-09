@@ -10,7 +10,7 @@
       <text class="h1">场景</text>
       <input value="{{name}}" placeholder="这里填写你的场景名" name="name"/>
       <text class="h1">备注</text>
-      <textarea auto-height placeholder="在这里填写备注信息" name="desc" />
+      <input value="{{desc}}" placeholder="在这里填写备注信息" name="desc"/>
       <text class="h1">类型</text>
       <radio-group class="radio-group" name="type" bindchange="radioChange">
         <label class="radio" wx:for="{{items}}" wx:key="item">
