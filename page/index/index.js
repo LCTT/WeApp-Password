@@ -13,7 +13,7 @@ Page({
     this.refreshData();
   },
   onReady: function () {
-     var that = this;
+    var that = this;
 
     /**
      * 每秒执行一次
@@ -88,21 +88,22 @@ Page({
         /** 
          * url decode 
          */
-        var data = decodeURIComponent(res.result);
+        var source = decodeURIComponent(res.result);
+        var data = source.split("otpauth://totp/")[1];
         /**
          * 数据截断
          */
-        var username = data.split(":")[2].split("?")[0];
-        var regexIssuer = data.split("/")[3].split("?")[0].split(":")[0];
-        var issuer = data.split("issuer=")[1];
-        var secret = data.split("?")[1].split("&")[0].split("=")[1];
-
-        /**
-         * 判断是否是 libpam 的 url
-         */
-        if (username == null || issuer != regexIssuer) {
-          username = result.split("/")[3].split("?")[0];
+        var isHaveIssuer = data.split("?")[0].indexOf(":") != -1 && data.split("?")[0].indexOf(":") != 0 ;
+        if (isHaveIssuer) {
+          console.log(data);
+          var username = data.split("?")[0].split(":")[1];
+        } else {
+          
+          console.log(data);
+          var username = data.split("?")[0];
         }
+        var issuer = data.split("issuer=")[1];
+        var secret = data.split("?")[1].split("&")[0].split("=")[1]
 
         wx.navigateTo({
           url: '../add/add?secret=' + secret + "&name=" + issuer + "&username=" + username
@@ -110,7 +111,7 @@ Page({
 
       },
       fail: function (res) {
-       if (res.errMsg == 'scanCode:fail cancel') {
+        if (res.errMsg == 'scanCode:fail cancel') {
 
         } else {
           wx.showModal({
@@ -129,25 +130,25 @@ Page({
     var raw_servers = wx.getStorageSync('servers');
 
     if (raw_servers == '') {
-      return ;
+      return;
     }
     var servers = JSON.parse(raw_servers);
     if (servers.length == 0) {
       that.setData({
         servers: []
       })
-      return ;
+      return;
     }
-   
-      var server = [];
-      servers.forEach(function (value, index, array) {
-        value.code = totp.getCode(value.secret);
-        server.push(value);
-      });
-      that.setData({
-        servers: server
-      })
-    
+
+    var server = [];
+    servers.forEach(function (value, index, array) {
+      value.code = totp.getCode(value.secret);
+      server.push(value);
+    });
+    that.setData({
+      servers: server
+    })
+
 
   },
   onPullDownRefresh: function () {
