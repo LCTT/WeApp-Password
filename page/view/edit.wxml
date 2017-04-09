@@ -1,7 +1,7 @@
 <view class="flexBox">
   <view class="card mainBlue">
     <text class="p">密钥签发者</text>
-    <text class="h1">Linux中国</text>
+    <text class="h1">{{signedBy}}</text>
   </view>
   <form name="form" catchsubmit="submitData">
     <view class="card mainWhite">
@@ -11,7 +11,7 @@
       <input value="{{name}}" placeholder="这里填写你的场景名" name="name" />
       <text class="h1">备注</text>
       <input value="{{desc}}" placeholder="在这里填写备注信息" name="desc"/>
-     
+    
       
       <text class="h1">类型</text>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
