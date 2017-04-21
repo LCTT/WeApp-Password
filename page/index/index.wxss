@@ -8,3 +8,11 @@
   margin: 10rpx 20rpx;
   opacity: 0.8;
 }
+
+.flexBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
