@@ -20,3 +20,9 @@
     margin: 0 auto;
     padding:  20rpx 0rpx;
 }
+.link{
+    text-align: left;
+    font-size: 25rpx;
+    line-height: 40rpx;
+    font-weight: bold;
+}

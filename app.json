@@ -1,6 +1,5 @@
 {
     "pages": [
-        
         "page/index/index",
         "page/index/slide",
         "page/add/add",
@@ -14,7 +13,8 @@
         "page/book/openssh",
         "page/view/view",
         "page/view/qr",
-        "page/view/edit"
+        "page/view/edit",
+        "page/feedback/feedback"
     ],
     "tabBar": {
         "color": "#8a8a8a",

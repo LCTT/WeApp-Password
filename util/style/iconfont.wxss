@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 268965 */
-  src: url('//at.alicdn.com/t/font_gyqy6j2eej3jtt9.eot');
-  src: url('//at.alicdn.com/t/font_gyqy6j2eej3jtt9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_gyqy6j2eej3jtt9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_gyqy6j2eej3jtt9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_gyqy6j2eej3jtt9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_0c05mseq0jjdcxr.eot');
+  src: url('//at.alicdn.com/t/font_0c05mseq0jjdcxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_0c05mseq0jjdcxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_0c05mseq0jjdcxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_0c05mseq0jjdcxr.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -42,3 +42,4 @@
 .icon-about:before { content: "\e6b4"; }
 
 .icon-other:before { content: "\e875"; }
+.icon-feedback:before { content: "\e60c"; }

@@ -1,0 +1,26 @@
+<view class="flexBox">
+  <view class="card mainBlue">
+    <text class="title">
+      反馈信息
+    </text>
+    <text class="h1">
+      前往 Github 反馈 Bug
+    </text>
+    <text class="p">
+    前往项目的 Github 仓库，并提交新的 Issue ，反馈您遇见的问题，我们将竭尽全力帮你解决问题。
+    </text>
+    <text class="link" catchtap="copyLink">
+    https://github.com/LCTT/WeApp-Password/issues (点击复制链接)
+    </text>
+    <text class="h1">
+      添加微信群参与讨论
+    </text>
+    <text class="p">
+    添加我们的微信机器人的账号，回复关键词  运维密码  即可被机器人邀请进入运维密码交流群。
+    </text>
+    <text class="link" catchtap="copyWechat">
+    微信号：huanchengbai 口令：运维密码 (点击复制微信号)
+    </text>
+  </view>
+  <text class="copyright">Powered by Linux中国</text>
+</view>

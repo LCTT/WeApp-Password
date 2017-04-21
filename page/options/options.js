@@ -30,6 +30,13 @@ Page({
         "desc":"运维密码和我们",
         "color":"mainRed",
          "typed" :"about"
+      },
+      {
+        "url":"/page/feedback/feedback",
+        "name":"建议反馈",
+        "desc":"倾听来自您的意见",
+        "color":"mainRed",
+        "typed" :"feedback"
       }
     ]
   },
