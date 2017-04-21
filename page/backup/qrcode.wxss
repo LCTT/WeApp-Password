@@ -1,6 +1,6 @@
 .container-box {
   background-color: #efeff4;
-  height: 100vh;
+  height: 100%;
 }
 
 .img-box {

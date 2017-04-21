@@ -5,5 +5,5 @@
     "backgroundColor": "#8a8a8a",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false,
-    "disableScroll":true
+    "disableScroll":false
 }
