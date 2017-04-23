@@ -16,10 +16,10 @@
       添加微信群参与讨论
     </text>
     <text class="p">
-    添加我们的微信机器人的账号，回复关键词  运维密码  即可被机器人邀请进入运维密码交流群。
+    添加我们的微信机器人的账号，回复关键词“运维密码”即可被机器人邀请进入运维密码交流群。
     </text>
     <text class="link" catchtap="copyWechat">
-    微信号：huanchengbai 口令：运维密码 (点击复制微信号)
+    微信号：huanchengbai 口令：运维密码  (点击复制微信号)
     </text>
   </view>
   <text class="copyright">Powered by Linux中国</text>
