@@ -1,5 +1,5 @@
 <view style="background-color: yellow;color:red;text-align: center;padding: 10rpx 5rpx;">
-  运维密码最晚将于 2025 年 5 月 1 日下线，请使用设置中的备份功能备份，并访问 otp.liunx.net.cn 进行解码，获取对应的密钥，并使用到其他软件中。</view>
+  运维密码最晚将于 2025 年 5 月 1 日下线，请使用设置中的备份功能备份，并访问 otp.linux.net.cn 进行解码，获取对应的密钥，并使用到其他软件中。</view>
 <view class="flexBox">
   <view class="card mainBlue">
     <view class="cardLogo">
